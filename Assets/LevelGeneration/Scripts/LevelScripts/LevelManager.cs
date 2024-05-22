@@ -28,11 +28,13 @@ public class LevelManager : MonoBehaviour
     public Count wallCount = new Count(5, 9);                       //Lower and upper limit for our random number of walls per level.
     public Count foodCount = new Count(1, 5);                       //Lower and upper limit for our random number of food items per level.
     public GameObject exit;                                         //Prefab to spawn for exit.
+    public GameObject exitGO;                                         //Prefab to spawn for exit.
     public GameObject[] floorTiles;                                 //Array of floor prefabs.
     public GameObject[] wallTiles;                                  //Array of wall prefabs.
     public GameObject[] foodTiles;                                  //Array of food prefabs.
     public GameObject[] enemyTiles;                                 //Array of enemy prefabs.
     public GameObject[] outerWallTiles;                             //Array of outer tile prefabs.
+    public int currentEnemy;
 
     private Transform boardHolder;                                  //A variable to store a reference to the transform of our Board object.
     private List<Vector3> gridPositions = new List<Vector3>();  //A list of possible locations to place tiles.
@@ -147,6 +149,6 @@ public class LevelManager : MonoBehaviour
         LayoutObjectAtRandom(enemyTiles, enemyCount, enemyCount);
 
         //Instantiate the exit tile in the upper right hand corner of our game board
-        Instantiate(exit, new Vector3(columns - 1, rows - 1, 0f), Quaternion.identity);
+        exitGO = Instantiate(exit, new Vector3(columns - 1, rows - 1, 0f), Quaternion.identity);
     }
 }

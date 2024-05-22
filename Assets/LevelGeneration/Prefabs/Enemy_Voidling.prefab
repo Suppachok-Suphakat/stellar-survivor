@@ -301,7 +301,7 @@ GameObject:
   - component: {fileID: 8019490650374748383}
   - component: {fileID: 8655666232419251723}
   m_Layer: 10
-  m_Name: Voidling
+  m_Name: Enemy_Voidling
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using static UnityEngine.Rendering.DebugUI.Table;
+using UnityEngine.UIElements;
 
 public class LevelGameManager : MonoBehaviour
 {
     public float levelStartDelay = 2f;                      //Time to wait before starting level, in seconds.
     public float turnDelay = 0.1f;                          //Delay between each Player turn.
-    public int playerFoodPoints = 100;                      //Starting value for Player food points.
     public static LevelGameManager instance = null;              //Static instance of GameManager which allows it to be accessed by any other script.
     [HideInInspector] public bool playersTurn = true;       //Boolean to check if it's players turn, hidden in inspector but public.
 
@@ -16,9 +17,11 @@ public class LevelGameManager : MonoBehaviour
     private GameObject levelImage;                          //Image to block out level as levels are being set up, background for levelText.
     private LevelManager levelScript;                       //Store a reference to our BoardManager which will set up the level.
     private int level = 1;                                  //Current level number, expressed in game as "Day 1".
-    private List<Enemy> enemies;                            //List of all Enemy units, used to issue them move commands.
-    private bool enemiesMoving;                             //Boolean to check if enemies are moving.
+    private List<EnemyHealth> enemies;                            //List of all Enemy units, used to issue them move commands.
     private bool doingSetup = true;                         //Boolean to check if we're setting up board, prevent Player from moving during setup.
+
+    private List<GameObject> enemyList = new List<GameObject>();
+    public bool haveEnemy = false;
 
     //Awake is always called before any Start functions
     void Awake()
@@ -39,7 +42,7 @@ public class LevelGameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         //Assign enemies to a new List of Enemy objects.
-        enemies = new List<Enemy>();
+        enemies = new List<EnemyHealth>();
 
         //Get a component reference to the attached BoardManager script
         levelScript = GetComponent<LevelManager>();
@@ -79,7 +82,7 @@ public class LevelGameManager : MonoBehaviour
 
         //Set the text of levelText to the string "Day" and append the current level number.
         //levelText.text = "วันที่ " + level;
-        levelText.text = ThaiFontAdjuster.Adjust("ถนนที่ " + level);
+        levelText.text = ThaiFontAdjuster.Adjust("Room no." + level);
 
         //Set levelImage to active blocking player's view of the game board during setup.
         levelImage.SetActive(true);
@@ -92,7 +95,6 @@ public class LevelGameManager : MonoBehaviour
 
         //Call the SetupScene function of the BoardManager script, pass it current level number.
         levelScript.SetupScene(level);
-
     }
 
 
@@ -115,23 +117,57 @@ public class LevelGameManager : MonoBehaviour
             //If any of these are true, return and do not start MoveEnemies.
             return;
 
-        //Start moving enemies.
-        StartCoroutine(MoveEnemies());
+        if (!haveEnemy)
+        {
+            levelScript.exitGO.gameObject.SetActive(true);
+        }
+        else
+        {
+            levelScript.exitGO.gameObject.SetActive(false);
+        }
     }
 
     //Call this to add the passed in Enemy to the List of Enemy objects.
-    public void AddEnemyToList(Enemy script)
+    public void AddEnemyToList(EnemyHealth script)
     {
         //Add Enemy to List enemies.
         enemies.Add(script);
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            if (!enemyList.Contains(collision.gameObject))
+            {
+                enemyList.Add(collision.gameObject);
+            }
+            UpdateHaveEnemy();
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            if (enemyList.Contains(collision.gameObject))
+            {
+                enemyList.Remove(collision.gameObject);
+            }
+            UpdateHaveEnemy();
+        }
+    }
+
+    private void UpdateHaveEnemy()
+    {
+        haveEnemy = enemyList.Count > 0;
+    }
 
     //GameOver is called when the player reaches 0 food points
     public void GameOver()
     {
         //Set levelText to display number of levels passed and game over message
-        levelText.text = "คุณอดอยากหลังจาก " + level + " วัน";
+        levelText.text = "You stop at room no." + level;
         ThaiFontAdjuster.Adjust(levelText.text);
 
         //Enable black background image gameObject.
@@ -139,37 +175,5 @@ public class LevelGameManager : MonoBehaviour
 
         //Disable this GameManager.
         enabled = false;
-    }
-
-    //Coroutine to move enemies in sequence.
-    IEnumerator MoveEnemies()
-    {
-        //While enemiesMoving is true player is unable to move.
-        enemiesMoving = true;
-
-        //Wait for turnDelay seconds, defaults to .1 (100 ms).
-        yield return new WaitForSeconds(turnDelay);
-
-        //If there are no enemies spawned (IE in first level):
-        if (enemies.Count == 0)
-        {
-            //Wait for turnDelay seconds between moves, replaces delay caused by enemies moving when there are none.
-            yield return new WaitForSeconds(turnDelay);
-        }
-
-        //Loop through List of Enemy objects.
-        for (int i = 0; i < enemies.Count; i++)
-        {
-            //Call the MoveEnemy function of Enemy at index i in the enemies List.
-            enemies[i].MoveEnemy();
-
-            //Wait for Enemy's moveTime before moving next Enemy, 
-            yield return new WaitForSeconds(enemies[i].moveTime);
-        }
-        //Once Enemies are done moving, set playersTurn to true so player can move.
-        playersTurn = true;
-
-        //Enemies are done moving, set enemiesMoving to false.
-        enemiesMoving = false;
     }
 }
