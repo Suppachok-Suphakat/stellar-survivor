@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.TextCore.Text;
 
 public class PlayerController : MonoBehaviour
@@ -39,6 +40,8 @@ public class PlayerController : MonoBehaviour
     public bool isMenuActive = false;
 
     private Charecter charecter;
+
+    public float restartLevelDelay = 1f;        //Delay time in seconds to restart level.
 
     private void Awake()
     {
@@ -134,6 +137,26 @@ public class PlayerController : MonoBehaviour
         {
             collider.GetComponent<Interactable>()?.Interact();
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        //Check if the tag of the trigger collided with is Exit.
+        if (other.tag == "Exit")
+        {
+            //Invoke the Restart function to start the next level with a delay of restartLevelDelay (default 1 second).
+            Invoke("Restart", restartLevelDelay);
+
+            //Disable the player object since level is over.
+            enabled = false;
+        }
+    }
+
+    private void Restart()
+    {
+        //Load the last scene loaded, in this case Main, the only scene in the game. And we load it in "Single" mode so it replace the existing one
+        //and not load all the scene object in the current scene.
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
     }
 
     private void AdjustPlayerFacingDirection()
