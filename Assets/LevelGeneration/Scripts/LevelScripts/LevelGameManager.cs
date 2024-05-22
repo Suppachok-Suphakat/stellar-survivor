@@ -110,7 +110,7 @@ public class LevelGameManager : MonoBehaviour
     void Update()
     {
         //Check that playersTurn or enemiesMoving or doingSetup are not currently true.
-        if (playersTurn || enemiesMoving || doingSetup)
+        if (doingSetup)
 
             //If any of these are true, return and do not start MoveEnemies.
             return;
