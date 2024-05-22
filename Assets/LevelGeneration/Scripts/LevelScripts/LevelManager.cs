@@ -39,6 +39,10 @@ public class LevelManager : MonoBehaviour
     private Transform boardHolder;                                  //A variable to store a reference to the transform of our Board object.
     private List<Vector3> gridPositions = new List<Vector3>();  //A list of possible locations to place tiles.
 
+    public GameObject bossEnemy1;
+    public GameObject bossEnemy2;
+    public GameObject bossEnemy3;
+
 
     //Clears our list gridPositions and prepares it to generate a new board.
     void InitialiseList()
@@ -126,9 +130,43 @@ public class LevelManager : MonoBehaviour
         }
     }
 
+    Vector3 GetRandomPositionForExit()
+    {
+        int randomIndex = Random.Range(0, gridPositions.Count);
+        Vector3 randomPosition = gridPositions[randomIndex];
+        gridPositions.RemoveAt(randomIndex);
+        return randomPosition;
+    }
+
+    public void SetupScene(int level)
+    {
+        switch (level)
+        {
+            //case 1:
+            //    SetupStartRoom();
+            //    break;
+            case 10:
+                SetupBossRoom1();
+                break;
+            case 20:
+                SetupBossRoom2();
+                break;
+            case 30:
+                SetupBossRoom3();
+                break;
+            default:
+                SetupRegularRoom(level);
+                break;
+        }
+    }
+
+    public void SetupStartRoom()
+    {
+
+    }
 
     //SetupScene initializes our level and calls the previous functions to lay out the game board
-    public void SetupScene(int level)
+    public void SetupRegularRoom(int level)
     {
         //Creates the outer walls and floor.
         BoardSetup();
@@ -149,6 +187,37 @@ public class LevelManager : MonoBehaviour
         LayoutObjectAtRandom(enemyTiles, enemyCount, enemyCount);
 
         //Instantiate the exit tile in the upper right hand corner of our game board
-        exitGO = Instantiate(exit, new Vector3(columns - 1, rows - 1, 0f), Quaternion.identity);
+        Vector3 exitPosition = GetRandomPositionForExit();
+        exitGO = Instantiate(exit, exitPosition, Quaternion.identity);
+    }
+
+    public void SetupBossRoom1()
+    {
+        // Creates the outer walls and floor.
+        BoardSetup();
+
+        // Reset our list of grid positions.
+        InitialiseList();
+
+        // Set up the boss room. For example, you might want to add some special tiles or objects.
+        // Here, you might add fewer walls and more powerful enemies, or a boss enemy.
+
+        // Example of placing a boss enemy at a specific position:
+        Vector3 bossPosition = new Vector3(columns / 2, rows / 2, 0f); // Center of the board
+        Instantiate(bossEnemy1, bossPosition, Quaternion.identity);
+
+        // Place the exit in the upper right-hand corner.
+        Vector3 exitPosition = GetRandomPositionForExit();
+        exitGO = Instantiate(exit, exitPosition, Quaternion.identity);
+    }
+
+    public void SetupBossRoom2()
+    {
+        
+    }
+
+    public void SetupBossRoom3()
+    {
+
     }
 }
