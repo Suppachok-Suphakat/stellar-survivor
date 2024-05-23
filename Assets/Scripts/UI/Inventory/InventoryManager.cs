@@ -11,7 +11,7 @@ public class InventoryManager : MonoBehaviour
     public GameObject partnerMenu;
 
     public ItemSlot[] itemSlot;
-    public EquipmentSlot[] equipmentSlot;
+    public UpgradeSelect[] equipmentSlot;
     public EquippedSlot[] equippedSlot;
 
     public ItemSO[] itemSOs;

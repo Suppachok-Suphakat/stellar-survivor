@@ -13,6 +13,11 @@ public class ToolbarSlot : MonoBehaviour
 
     [SerializeField] private ItemType itemType = new ItemType();
 
+    private void Start()
+    {
+        slotSprite.GetComponent<Image>().sprite = weaponInfo.weaponSprite;
+    }
+
     public WeaponInfo GetWeaponInfo()
     {
         return weaponInfo;
