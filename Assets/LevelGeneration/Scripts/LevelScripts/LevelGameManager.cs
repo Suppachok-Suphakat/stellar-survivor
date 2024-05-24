@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using static UnityEngine.Rendering.DebugUI.Table;
 using UnityEngine.UIElements;
 
 public class LevelGameManager : MonoBehaviour
