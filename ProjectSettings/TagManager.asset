@@ -7,6 +7,9 @@ TagManager:
   - Enemy
   - EnemyOrigin
   - Partner
+  - Exit
+  - Food
+  - Soda
   layers:
   - Default
   - TransparentFX
@@ -41,15 +44,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Background
-    uniqueID: 1649227597
-    locked: 0
-  - name: Foreground
-    uniqueID: 3087967827
-    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Highground
+  - name: Floor
+    uniqueID: 1649227597
+    locked: 0
+  - name: Items
+    uniqueID: 3087967827
+    locked: 0
+  - name: Units
     uniqueID: 3919700413
     locked: 0

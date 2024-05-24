@@ -2153,9 +2153,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 100
+  m_SortingLayerID: -375266883
+  m_SortingLayer: 3
+  m_SortingOrder: 0
   m_Sprite: {fileID: 1922754946, guid: 48ab37c0aefb4974f8c35f21f597a721, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3197,8 +3197,6 @@ GameObject:
   - component: {fileID: 1830935486}
   - component: {fileID: 1830935485}
   - component: {fileID: 1830935484}
-  - component: {fileID: 1830935483}
-  - component: {fileID: 1830935482}
   m_Layer: 5
   m_Name: Background Canvas
   m_TagString: Untagged
@@ -3206,99 +3204,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1830935482
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1830935481}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c4661e912c6c264fb4e456cf7325f8b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  equipmentSO:
-  - {fileID: 11400000, guid: 3e32d0e5579a8624da32c6086600e3d7, type: 2}
-  - {fileID: 11400000, guid: 7bb53fd6380c89c4381450efcb70cf81, type: 2}
-  - {fileID: 11400000, guid: a9a801558daa27246acc7681d871cb2d, type: 2}
-  - {fileID: 11400000, guid: b521a5128003d644093590428b4bd22a, type: 2}
-  - {fileID: 11400000, guid: 347ec333f92499345b7bd957993d6324, type: 2}
-  - {fileID: 11400000, guid: 7f9b0faa92cced448811ede7bdfabe3f, type: 2}
-  - {fileID: 11400000, guid: 082c74a945ac4b3458dca7c4d9e896c0, type: 2}
-  - {fileID: 11400000, guid: 435bae2648d4b0c4b83f54e238d10e53, type: 2}
-  - {fileID: 11400000, guid: e2acb9c94fa036246982d5242589fe8e, type: 2}
-  - {fileID: 11400000, guid: 99a5e6f91fa4f1e4795170f0e4af77ea, type: 2}
---- !u!114 &1830935483
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1830935481}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0332c8eebdd6ef4db17c60f9c78af61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryMenu: {fileID: 0}
-  equipmentMenu: {fileID: 0}
-  partnerMenu: {fileID: 0}
-  itemSlot:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  equipmentSlot:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  equippedSlot:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  itemSOs:
-  - {fileID: 11400000, guid: 116aecc06a03ae644933ae823b976b34, type: 2}
-  - {fileID: 11400000, guid: 528ea1e0ca42e374eb39a00211b65d78, type: 2}
 --- !u!114 &1830935484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3358,7 +3263,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_TargetDisplay: 0
 --- !u!224 &1830935487
 RectTransform:
@@ -3548,6 +3453,18 @@ PrefabInstance:
     - target: {fileID: 2344852155713677578, guid: 2b99072975f918649af50324bca8343a, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4671313104234032614, guid: 2b99072975f918649af50324bca8343a, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4671313104234032614, guid: 2b99072975f918649af50324bca8343a, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4671313104234032614, guid: 2b99072975f918649af50324bca8343a, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -375266883
       objectReference: {fileID: 0}
     - target: {fileID: 4671313104234032614, guid: 2b99072975f918649af50324bca8343a, type: 3}
       propertyPath: m_Materials.Array.data[0]
