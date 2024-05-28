@@ -139,11 +139,17 @@ public class UpgradeManager : MonoBehaviour
     }
 }
 
-public enum UpgradeType
+public enum ItemType
 {
+    consumeable,
+    collectible,
     assaultWeapon,
+    magicWeapon,
     rangeWeapon,
-    playerAbility,
-    companionAbility,
+    head,
+    body,
+    shields,
+    rings,
+    relics,
     none
 };

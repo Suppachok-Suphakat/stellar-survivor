@@ -6,7 +6,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System;
 
-public class UpgradeSelect : MonoBehaviour
+public class UpgradeSelect : MonoBehaviour, IPointerClickHandler
 {
     //====ITEM DATA====//
     public string itemName;
@@ -24,16 +24,11 @@ public class UpgradeSelect : MonoBehaviour
     //====ITEM SLOT====//
     [SerializeField] Image itemImage;
 
-    //====EQUIP SLOT====//
-    [SerializeField]
-    EquippedSlot assaultWeaponSlot,
-        magicWeaponSlot, rangeWeaponSlot;
-
 
     public GameObject selectedShader;
     public bool thisItemSelected;
 
-    private InventoryManager inventoryManager;
+    private UpgradeManager upgradeManager;
     private EquipmentSOLibrary equipmentSOLibrary;
 
     [SerializeField] public ToolbarSlot toolbarSlot;
@@ -42,10 +37,10 @@ public class UpgradeSelect : MonoBehaviour
 
     private void Start()
     {
-        inventoryManager = GameObject.Find("InventoryCanvas").GetComponent<InventoryManager>();
-        equipmentSOLibrary = GameObject.Find("InventoryCanvas").GetComponent<EquipmentSOLibrary>();
+        upgradeManager = GameObject.Find("UpgradeCanvas").GetComponent<UpgradeManager>();
+        equipmentSOLibrary = GameObject.Find("UpgradeCanvas").GetComponent<EquipmentSOLibrary>();
 
-        //Update Image
+        //upgradeManager.AddItem(itemName, 1, itemSprite, itemDescription, itemType, weaponInfo);
         this.itemSprite = weaponInfo.weaponSprite;
         itemImage.sprite = itemSprite;
     }
@@ -94,38 +89,23 @@ public class UpgradeSelect : MonoBehaviour
 
     public void OnLeftClick()
     {
-        if (isFull)
+        if (thisItemSelected)
         {
-            if (thisItemSelected)
-            {
-                EquipGear();
-            }
-            else
-            {
-                inventoryManager.DeselectAllSlots();
-                selectedShader.SetActive(true);
-                thisItemSelected = true;
-                itemDescriptionNameText.text = itemName;
-                itemDescriptionText.text = itemDescription;
-            }
+            Debug.Log("Equip");
+            EquipGear(itemSprite, itemName, itemDescription, weaponInfo);
         }
         else
         {
-            inventoryManager.DeselectAllSlots();
+            upgradeManager.DeselectAllSlots();
             selectedShader.SetActive(true);
             thisItemSelected = true;
+            itemDescriptionNameText.text = itemName;
+            itemDescriptionText.text = itemDescription;
         }
     }
 
     private void EquipGear()
     {
-        if (itemType == ItemType.assaultWeapon)
-            assaultWeaponSlot.EquipGear(itemSprite, itemName, itemDescription, weaponInfo);
-        if (itemType == ItemType.magicWeapon)
-            magicWeaponSlot.EquipGear(itemSprite, itemName, itemDescription, weaponInfo);
-        if (itemType == ItemType.rangeWeapon)
-            rangeWeaponSlot.EquipGear(itemSprite, itemName, itemDescription, weaponInfo);
-
         EmptySlot();
     }
 
@@ -138,7 +118,6 @@ public class UpgradeSelect : MonoBehaviour
 
         //UPDATE IMAGE
         this.itemSprite = itemSprite;
-        slotImage.sprite = this.itemSprite;
 
         //UPDATE DATA
         this.itemName = itemName;
@@ -149,7 +128,7 @@ public class UpgradeSelect : MonoBehaviour
         if (toolbarSlot != null)
         {
             toolbarSlot.weaponInfo = weaponInfo;
-            toolbarSlot.slotSprite.GetComponent<Image>().sprite = slotImage.sprite;
+            toolbarSlot.slotSprite.GetComponent<Image>().sprite = itemSprite;
         }
 
         GameObject.Find("ActiveToolbar").GetComponent<ActiveToolbar>().ChangeActiveWeapon();
@@ -159,16 +138,15 @@ public class UpgradeSelect : MonoBehaviour
 
     private void UnEquipGear()
     {
-        inventoryManager.DeselectAllSlots();
+        upgradeManager.DeselectAllSlots();
 
         string itemNameToUnequip = this.itemName;
         string itemDescriptionToUnequip = this.itemDescription;
         Sprite itemSpriteToUnequip = this.itemSprite;
 
-        inventoryManager.AddItem(itemNameToUnequip, 1, itemSpriteToUnequip, itemDescriptionToUnequip, itemType, weaponInfo);
+        upgradeManager.AddItem(itemNameToUnequip, 1, itemSpriteToUnequip, itemDescriptionToUnequip, itemType, weaponInfo);
 
         this.itemSprite = emptySprite;
-        slotImage.sprite = this.emptySprite;
 
         this.itemName = "";
         this.itemDescription = "";

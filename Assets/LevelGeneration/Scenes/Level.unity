@@ -290,7 +290,6 @@ GameObject:
   - component: {fileID: 59888595}
   - component: {fileID: 59888594}
   - component: {fileID: 59888593}
-  - component: {fileID: 59888596}
   m_Layer: 5
   m_Name: AssaultToolbar
   m_TagString: Untagged
@@ -375,32 +374,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 59888591}
   m_CullTransparentMesh: 1
---- !u!114 &59888596
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 59888591}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63f89d7ef94dcf84fa6bd9cc44f7b349, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slotImage: {fileID: 0}
-  slotName: {fileID: 0}
-  thisSlotName: Assault Weapon
-  itemType: 2
-  itemDescription: 
-  itemDescriptionNameText: {fileID: 0}
-  itemDescriptionText: {fileID: 0}
-  selectedShader: {fileID: 0}
-  thisItemSelected: 0
-  emptySprite: {fileID: 842633324, guid: 040849384216c8640a57355f00805026, type: 3}
-  toolbarSlot: {fileID: 0}
-  weaponInfo: {fileID: 0}
-  weaponPrefab: {fileID: 0}
-  noneWeaponInfo: {fileID: 11400000, guid: 3eac4e648186d134b9f13dcaf8cbef8f, type: 2}
 --- !u!1 &83129334
 GameObject:
   m_ObjectHideFlags: 0
@@ -1850,7 +1823,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 1000
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &851647063
 RectTransform:
@@ -2314,9 +2287,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 59888593}
     - target: {fileID: -6093905186672823542, guid: bf791b372dd817841bcbef7f0b853a99, type: 3}
+      propertyPath: thisItemSelected
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6093905186672823542, guid: bf791b372dd817841bcbef7f0b853a99, type: 3}
       propertyPath: assaultWeaponSlot
       value: 
-      objectReference: {fileID: 59888596}
+      objectReference: {fileID: 0}
     - target: {fileID: 5153918470611630898, guid: bf791b372dd817841bcbef7f0b853a99, type: 3}
       propertyPath: m_IsActive
       value: 0

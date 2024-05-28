@@ -180,18 +180,3 @@ public class InventoryManager : MonoBehaviour
         }
     }
 }
-
-public enum ItemType
-{
-    consumeable,
-    collectible,
-    assaultWeapon,
-    magicWeapon,
-    rangeWeapon,
-    head,
-    body,
-    shields,
-    rings,
-    relics,
-    none
-};
