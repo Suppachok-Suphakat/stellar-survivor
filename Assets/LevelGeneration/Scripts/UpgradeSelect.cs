@@ -134,6 +134,8 @@ public class UpgradeSelect : MonoBehaviour, IPointerClickHandler
         GameObject.Find("ActiveToolbar").GetComponent<ActiveToolbar>().ChangeActiveWeapon();
 
         slotInUse = true;
+
+        GameObject.Find("UpgradeCanvas").SetActive(false);
     }
 
     private void UnEquipGear()
