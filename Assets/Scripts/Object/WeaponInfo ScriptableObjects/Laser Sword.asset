@@ -16,4 +16,4 @@ MonoBehaviour:
   weaponCooldown: 0.5
   weaponDamage: 50
   weaponRange: 0
-  weaponSprite: {fileID: 0}
+  weaponSprite: {fileID: 1740457147, guid: daee16f8629839e4396595793eb10a79, type: 3}

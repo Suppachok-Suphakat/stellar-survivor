@@ -15,7 +15,10 @@ public class ToolbarSlot : MonoBehaviour
 
     private void Start()
     {
-        
+        if(weaponInfo != null)
+        {
+            slotSprite.GetComponent<Image>().sprite = weaponInfo.weaponSprite;
+        }
     }
 
     public WeaponInfo GetWeaponInfo()
