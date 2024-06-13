@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3965973021277788960}
   - component: {fileID: 6734572046547986158}
   - component: {fileID: 4985858178902500241}
+  - component: {fileID: -7255015847336073053}
   m_Layer: 8
   m_Name: Wall5
   m_TagString: Untagged
@@ -128,3 +129,15 @@ MonoBehaviour:
   chopSound2: {fileID: 8300000, guid: f6aaac83be9e0493493aace800b76619, type: 3}
   dmgSprite: {fileID: 21300104, guid: fbe1e7b94bb1a4a099d5bcb15a00141c, type: 3}
   hp: 3
+--- !u!114 &-7255015847336073053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4472476377284240815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d826872189c37a4cbdad398507d26ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
