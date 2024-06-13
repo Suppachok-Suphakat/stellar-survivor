@@ -18,9 +18,7 @@ public class EquipmentSO : ScriptableObject
 
     public void PreviewEquipment()
     {
-        GameObject.Find("StatManager").GetComponent<PlayerStats>().
-            PreviewEquipmentStats(vitality, radiance, eclipse, armor, 
-            strength, dexterity, intelligence, itemName, itemDescription);
+        GameObject.Find("StatManager").GetComponent<PlayerStats>();
     }
 
     public void EquipItem()
@@ -36,8 +34,6 @@ public class EquipmentSO : ScriptableObject
         playerStats.strength += strength;
         playerStats.dexterity += dexterity;
         playerStats.intelligence += intelligence;
-
-        playerStats.UpdateEquipmentStats();
     }
 
     public void UnEquipItem()
@@ -53,7 +49,5 @@ public class EquipmentSO : ScriptableObject
         playerStats.strength -= strength;
         playerStats.dexterity -= dexterity;
         playerStats.intelligence -= intelligence;
-
-        playerStats.UpdateEquipmentStats();
     }
 }

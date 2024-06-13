@@ -110,7 +110,6 @@ public class EquipmentSlot : MonoBehaviour, IPointerClickHandler
         }
         else
         {
-            GameObject.Find("StatManager").GetComponent<PlayerStats>().TurnOffPreviewStats();
             inventoryManager.DeselectAllSlots();
             selectedShader.SetActive(true);
             thisItemSelected = true;
@@ -163,7 +162,6 @@ public class EquipmentSlot : MonoBehaviour, IPointerClickHandler
         itemImage.sprite = emptySprite;
         itemDescriptionNameText.text = "";
         itemDescriptionText.text = "";
-        GameObject.Find("StatManager").GetComponent<PlayerStats>().TurnOffPreviewStats();
         isFull = false;
     }
 

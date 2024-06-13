@@ -80,7 +80,7 @@ public class UpgradeEquiped : MonoBehaviour, IPointerClickHandler
 
             if (!slotInUse)
             {
-                GameObject.Find("StatManager").GetComponent<PlayerStats>().TurnOffPreviewStats();
+                
             }
 
             for (int i = 0; i < equipmentSOLibrary.equipmentSO.Length; i++)
@@ -173,6 +173,5 @@ public class UpgradeEquiped : MonoBehaviour, IPointerClickHandler
         }
 
         slotInUse = false;
-        GameObject.Find("StatManager").GetComponent<PlayerStats>().TurnOffPreviewStats();
     }
 }

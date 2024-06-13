@@ -2801,6 +2801,60 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b306f84882e05fb469c3b286ff4d0b0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1788135661
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1788135663}
+  - component: {fileID: 1788135662}
+  m_Layer: 0
+  m_Name: StatManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1788135662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788135661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5daa3aeee39de9546b7c593942d3a9d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vitality: 0
+  radiance: 0
+  eclipse: 0
+  strength: 0
+  dexterity: 0
+  intelligence: 0
+  hp: 0
+  mp: 0
+  armor: 0
+  stamina: 0
+--- !u!4 &1788135663
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788135661}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 88.85249, y: 892.96606, z: -12.220645}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1804629765
 GameObject:
   m_ObjectHideFlags: 0

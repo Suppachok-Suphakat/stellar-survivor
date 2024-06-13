@@ -15,11 +15,15 @@ public class EnemyDamageSource : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         Charecter playerHealth = other.gameObject.GetComponent<Charecter>();
-        playerHealth?.TakeDamage(damageAmount, transform);
-        Knockback knockback = other.gameObject.GetComponent<Knockback>();
-        knockback.GetKnockedBack(transform, knockBackThrust);
+        if (playerHealth != null)
+        {
+            playerHealth.TakeDamage(damageAmount, transform);
+        }
 
-        PartnerHealth partnerHealth = other.gameObject.GetComponent<PartnerHealth>();
-        partnerHealth?.TakeDamage(damageAmount);
+        Knockback knockback = other.gameObject.GetComponent<Knockback>();
+        if (knockback != null)
+        {
+            knockback.GetKnockedBack(transform, knockBackThrust);
+        }
     }
 }
