@@ -105,6 +105,9 @@ public class Charecter : MonoBehaviour, IDamageable
     {
         isDead = false;
 
+        hpBar = GameObject.Find("Hp").GetComponent<StatusBar>();
+        staminaBar = GameObject.Find("Stamina").GetComponent<StatusBar>();
+
         UpdateHpBar();
         UpdateStaminaBar();
         UpdateManaBar();

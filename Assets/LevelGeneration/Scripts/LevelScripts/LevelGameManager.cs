@@ -48,6 +48,9 @@ public class LevelGameManager : MonoBehaviour
         //Get a component reference to the attached BoardManager script
         levelScript = GetComponent<LevelManager>();
 
+        upgradeImage = GameObject.Find("UpgradeCanvas");
+        upgradeImage.SetActive(false);
+
         //Call the InitGame function to initialize the first level 
         InitGame();
     }
@@ -74,9 +77,6 @@ public class LevelGameManager : MonoBehaviour
     {
         //While doingSetup is true the player can't move, prevent player from moving while title card is up.
         doingSetup = true;
-
-        upgradeImage = GameObject.Find("UpgradeCanvas");
-        upgradeImage.SetActive(false);
 
         //Get a reference to our image LevelImage by finding it by name.
         levelImage = GameObject.Find("LevelImage");
@@ -108,7 +108,7 @@ public class LevelGameManager : MonoBehaviour
         //Disable the levelImage gameObject.
         levelImage.SetActive(false);
 
-        if(level == 4)
+        if (level == 4)
         {
             upgradeImage.SetActive(true);
         }
