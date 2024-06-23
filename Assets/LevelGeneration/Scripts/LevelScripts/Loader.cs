@@ -6,10 +6,16 @@ public class Loader : MonoBehaviour
 {
     public GameObject levelGameManager;          //GameManager prefab to instantiate.
     public GameObject soundManager;         //SoundManager prefab to instantiate.
+    public Canvas upgradeCanvas;
 
 
     void Awake()
     {
+        if (UpgradeManager.instance == null)
+
+            //Instantiate SoundManager prefab
+            Instantiate(upgradeCanvas);
+
         //Check if a GameManager has already been assigned to static variable GameManager.instance or if it's still null
         if (LevelGameManager.instance == null)
 

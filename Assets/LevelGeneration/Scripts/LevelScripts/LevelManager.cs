@@ -43,6 +43,7 @@ public class LevelManager : MonoBehaviour
     public GameObject bossEnemy2;
     public GameObject bossEnemy3;
 
+    public int level;
 
     //Clears our list gridPositions and prepares it to generate a new board.
     void InitialiseList()
@@ -142,9 +143,6 @@ public class LevelManager : MonoBehaviour
     {
         switch (level)
         {
-            //case 1:
-            //    SetupStartRoom();
-            //    break;
             case 10:
                 SetupBossRoom1();
                 break;
@@ -158,11 +156,6 @@ public class LevelManager : MonoBehaviour
                 SetupRegularRoom(level);
                 break;
         }
-    }
-
-    public void SetupStartRoom()
-    {
-
     }
 
     //SetupScene initializes our level and calls the previous functions to lay out the game board

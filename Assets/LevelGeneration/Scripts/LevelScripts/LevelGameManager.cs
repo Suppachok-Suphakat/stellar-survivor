@@ -22,6 +22,8 @@ public class LevelGameManager : MonoBehaviour
     private List<GameObject> enemyList = new List<GameObject>();
     public bool haveEnemy = false;
 
+    public GameObject upgradeImage;
+
     //Awake is always called before any Start functions
     void Awake()
     {
@@ -73,6 +75,9 @@ public class LevelGameManager : MonoBehaviour
         //While doingSetup is true the player can't move, prevent player from moving while title card is up.
         doingSetup = true;
 
+        upgradeImage = GameObject.Find("UpgradeCanvas");
+        upgradeImage.SetActive(false);
+
         //Get a reference to our image LevelImage by finding it by name.
         levelImage = GameObject.Find("LevelImage");
 
@@ -102,6 +107,11 @@ public class LevelGameManager : MonoBehaviour
     {
         //Disable the levelImage gameObject.
         levelImage.SetActive(false);
+
+        if(level == 4)
+        {
+            upgradeImage.SetActive(true);
+        }
 
         //Set doingSetup to false allowing player to move again.
         doingSetup = false;
