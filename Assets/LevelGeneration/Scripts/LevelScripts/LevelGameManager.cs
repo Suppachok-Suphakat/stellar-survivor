@@ -49,6 +49,7 @@ public class LevelGameManager : MonoBehaviour
         levelScript = GetComponent<LevelManager>();
 
         upgradeImage = GameObject.Find("UpgradeCanvas");
+
         upgradeImage.SetActive(false);
 
         //Call the InitGame function to initialize the first level 
@@ -108,10 +109,10 @@ public class LevelGameManager : MonoBehaviour
         //Disable the levelImage gameObject.
         levelImage.SetActive(false);
 
-        if (level == 4)
-        {
-            upgradeImage.SetActive(true);
-        }
+        //if (level == 4)
+        //{
+        //    upgradeImage.SetActive(true);
+        //}
 
         //Set doingSetup to false allowing player to move again.
         doingSetup = false;
