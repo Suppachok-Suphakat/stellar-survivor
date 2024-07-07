@@ -12,6 +12,7 @@ public class Chest : MonoBehaviour
 
     private bool isPlayerInTrigger = false;
     [SerializeField] private GameObject unlockCanvas;
+    [SerializeField] private GameObject coinCanvas;
 
     //SLOT DATA//
     [SerializeField] private WeaponInfo weaponInfo;
@@ -20,6 +21,8 @@ public class Chest : MonoBehaviour
 
     private bool slotInUse;
 
+    [SerializeField] private int price;
+
     [SerializeField] private GameObject toolbarSlot;
 
     // Start is called before the first frame update
@@ -27,6 +30,8 @@ public class Chest : MonoBehaviour
     {
         pickupRenderer = GetComponent<SpriteRenderer>();
         pickupRenderer.enabled = false;
+
+        coinCanvas = GameObject.Find("CoinCanvas");
 
         itemRenderer = transform.Find("ItemSprite").GetComponent<SpriteRenderer>();
         itemRenderer.enabled = false;
@@ -68,19 +73,21 @@ public class Chest : MonoBehaviour
         // Check if the player is in the trigger zone and the F key is pressed.
         if (isPlayerInTrigger && Input.GetKeyDown(KeyCode.F))
         {
-            if (isAssaultWeapon)
+            if (isAssaultWeapon && coinCanvas.GetComponent<CoinManager>().currentGold >= price)
             {
+                coinCanvas.GetComponent<CoinManager>().DecreaseCurrentGold(price);
                 toolbarSlot = GameObject.Find("AssaultToolbar");
                 EquipGear(weaponInfo);
+                Destroy(this.gameObject);
             }
-            else if (isRangeWeapon)
+            else if (isRangeWeapon && coinCanvas.GetComponent<CoinManager>().currentGold >= price)
             {
+                coinCanvas.GetComponent<CoinManager>().DecreaseCurrentGold(price);
                 toolbarSlot = GameObject.Find("RangeToolbar");
                 toolbarSlot.GetComponent<ToolbarSlot>();
                 EquipGear(weaponInfo);
+                Destroy(this.gameObject);
             }
-
-            Destroy(this.gameObject);
         }
     }
 
