@@ -22,8 +22,6 @@ public class LevelGameManager : MonoBehaviour
     private List<GameObject> enemyList = new List<GameObject>();
     public bool haveEnemy = false;
 
-    public GameObject upgradeImage;
-
     //Awake is always called before any Start functions
     void Awake()
     {
@@ -47,10 +45,6 @@ public class LevelGameManager : MonoBehaviour
 
         //Get a component reference to the attached BoardManager script
         levelScript = GetComponent<LevelManager>();
-
-        upgradeImage = GameObject.Find("UpgradeCanvas");
-
-        upgradeImage.SetActive(false);
 
         //Call the InitGame function to initialize the first level 
         InitGame();
@@ -108,11 +102,6 @@ public class LevelGameManager : MonoBehaviour
     {
         //Disable the levelImage gameObject.
         levelImage.SetActive(false);
-
-        //if (level == 4)
-        //{
-        //    upgradeImage.SetActive(true);
-        //}
 
         //Set doingSetup to false allowing player to move again.
         doingSetup = false;
