@@ -41,8 +41,6 @@ public class PlayerController : MonoBehaviour
 
     private Charecter charecter;
 
-    public float restartLevelDelay = 1f;        //Delay time in seconds to restart level.
-
     private void Awake()
     {
         instance = this;
@@ -136,19 +134,6 @@ public class PlayerController : MonoBehaviour
         if (collider != null)
         {
             collider.GetComponent<Interactable>()?.Interact();
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        //Check if the tag of the trigger collided with is Exit.
-        if (other.tag == "Exit")
-        {
-            //Invoke the Restart function to start the next level with a delay of restartLevelDelay (default 1 second).
-            Invoke("Restart", restartLevelDelay);
-
-            //Disable the player object since level is over.
-            enabled = false;
         }
     }
 
