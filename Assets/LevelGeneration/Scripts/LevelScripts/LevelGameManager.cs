@@ -22,6 +22,8 @@ public class LevelGameManager : MonoBehaviour
     private List<GameObject> enemyList = new List<GameObject>();
     public bool haveEnemy = false;
 
+    public GameObject chestGO; // Reference to the chest GameObject
+
     //Awake is always called before any Start functions
     void Awake()
     {
@@ -119,10 +121,18 @@ public class LevelGameManager : MonoBehaviour
         if (!haveEnemy)
         {
             levelScript.exitGO.gameObject.SetActive(true);
+            if (levelScript.chestGO != null)
+            {
+                levelScript.chestGO.SetActive(true); // Activate the chest when all enemies are defeated
+            }
         }
         else
         {
             levelScript.exitGO.gameObject.SetActive(false);
+            if (levelScript.chestGO != null)
+            {
+                levelScript.chestGO.SetActive(false); // Ensure chest is inactive if enemies are present
+            }
         }
     }
 

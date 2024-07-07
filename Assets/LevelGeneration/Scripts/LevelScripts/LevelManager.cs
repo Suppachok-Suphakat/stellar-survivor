@@ -36,8 +36,13 @@ public class LevelManager : MonoBehaviour
     public GameObject[] outerWallTiles;                             //Array of outer tile prefabs.
     public int currentEnemy;
 
+    public GameObject[] chestPrefabs; // Array of chest prefabs
+    private List<GameObject> availableChestPrefabs = new List<GameObject>();
+
     private Transform boardHolder;                                  //A variable to store a reference to the transform of our Board object.
     private List<Vector3> gridPositions = new List<Vector3>();  //A list of possible locations to place tiles.
+
+    public GameObject chestGO; // Reference to the chest GameObject
 
     public GameObject bossEnemy1;
     public GameObject bossEnemy2;
@@ -161,28 +166,28 @@ public class LevelManager : MonoBehaviour
     //SetupScene initializes our level and calls the previous functions to lay out the game board
     public void SetupRegularRoom(int level)
     {
-        //Creates the outer walls and floor.
         BoardSetup();
-
-        //Reset our list of gridpositions.
         InitialiseList();
-
-        //Instantiate a random number of wall tiles based on minimum and maximum, at randomized positions.
         LayoutObjectAtRandom(wallTiles, wallCount.minimum, wallCount.maximum);
-
-        //Instantiate a random number of food tiles based on minimum and maximum, at randomized positions.
         LayoutObjectAtRandom(foodTiles, foodCount.minimum, foodCount.maximum);
-
-        //Determine number of enemies based on current level number, based on a logarithmic progression
         int enemyCount = (int)Mathf.Log(level, 2f);
-
-        //Instantiate a random number of enemies based on minimum and maximum, at randomized positions.
         LayoutObjectAtRandom(enemyTiles, enemyCount, enemyCount);
 
-        //Instantiate the exit tile in the upper right hand corner of our game board
+        InitializeChestPool();
+        SpawnRandomChest();
+
         Vector3 exitPosition = GetRandomPositionForExit();
         exitGO = Instantiate(exit, exitPosition, Quaternion.identity);
+        exitGO.SetActive(false); // Initially inactive
+
+        chestGO = GameObject.FindGameObjectWithTag("Chest"); // Find the chest GameObject by tag
+        if (chestGO != null)
+        {
+            chestGO.SetActive(false); // Initially inactive
+        }
     }
+
+
 
     public void SetupBossRoom1()
     {
@@ -212,5 +217,23 @@ public class LevelManager : MonoBehaviour
     public void SetupBossRoom3()
     {
 
+    }
+
+    private void InitializeChestPool()
+    {
+        availableChestPrefabs = new List<GameObject>(chestPrefabs); // Reset available chests
+    }
+
+    private void SpawnRandomChest()
+    {
+        if (availableChestPrefabs.Count > 0)
+        {
+            int randomIndex = Random.Range(0, availableChestPrefabs.Count);
+            GameObject chestPrefab = availableChestPrefabs[randomIndex];
+            availableChestPrefabs.RemoveAt(randomIndex); // Remove the chest from the list to ensure it's unique
+
+            Vector3 randomPosition = RandomPosition(); // Use existing method to get a random position
+            Instantiate(chestPrefab, randomPosition, Quaternion.identity);
+        }
     }
 }

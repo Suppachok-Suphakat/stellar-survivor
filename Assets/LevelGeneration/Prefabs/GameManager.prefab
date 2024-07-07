@@ -26,13 +26,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6886119544515573640}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8948425212172597689
 MonoBehaviour:
@@ -85,6 +85,13 @@ MonoBehaviour:
   - {fileID: 3967377549724295642, guid: 72b327a59ae2a1742904b0e1fe7f0396, type: 3}
   - {fileID: 1262944770248286176, guid: ae60699b5a1f55c45bfc8dc1453d0a2a, type: 3}
   currentEnemy: 0
+  chestPrefabs:
+  - {fileID: 6220888037838649635, guid: e8744d7ef1316754a807aa99d4b26915, type: 3}
+  chestGO: {fileID: 0}
+  bossEnemy1: {fileID: 0}
+  bossEnemy2: {fileID: 0}
+  bossEnemy3: {fileID: 0}
+  level: 0
 --- !u!114 &-8760575102084486382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101,6 +108,7 @@ MonoBehaviour:
   turnDelay: 0.1
   playersTurn: 1
   haveEnemy: 0
+  chestGO: {fileID: 0}
 --- !u!61 &7439493235577096375
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -111,25 +119,6 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0

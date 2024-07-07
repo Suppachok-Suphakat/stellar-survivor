@@ -369,6 +369,7 @@ GameObject:
   - component: {fileID: 6220888037138002564}
   - component: {fileID: 6220888037138002562}
   - component: {fileID: 6220888037138002565}
+  - component: {fileID: 667034309955732145}
   m_Layer: 0
   m_Name: ChestSprite
   m_TagString: Untagged
@@ -463,6 +464,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &667034309955732145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6220888037138002567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f6eee2e8e365b4469effc8f6d062e8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemSpite: {fileID: 6220888037193776547}
 --- !u!1 &6220888037193776547
 GameObject:
   m_ObjectHideFlags: 0
@@ -538,8 +552,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -375266883
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -1349397161, guid: 69fe9318071f4a548986fead5f058504, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -829,7 +843,7 @@ GameObject:
   - component: {fileID: 6220888037838649663}
   m_Layer: 0
   m_Name: GunChest
-  m_TagString: Untagged
+  m_TagString: Chest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

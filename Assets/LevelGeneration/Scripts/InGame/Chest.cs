@@ -7,7 +7,6 @@ public class Chest : MonoBehaviour
 {
     private SpriteRenderer pickupRenderer;
 
-    private SpriteRenderer itemRenderer;
     public float delay = 1f;
 
     private bool isPlayerInTrigger = false;
@@ -31,20 +30,9 @@ public class Chest : MonoBehaviour
         pickupRenderer = GetComponent<SpriteRenderer>();
         pickupRenderer.enabled = false;
 
+        unlockCanvas.SetActive(false);
+
         coinCanvas = GameObject.Find("CoinCanvas");
-
-        itemRenderer = transform.Find("ItemSprite").GetComponent<SpriteRenderer>();
-        itemRenderer.enabled = false;
-        StartCoroutine(ShowItem());
-    }
-
-    IEnumerator ShowItem()
-    {
-        // Wait for the specified delay
-        yield return new WaitForSeconds(delay);
-
-        // Enable the image GameObject
-        itemRenderer.enabled = true;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
