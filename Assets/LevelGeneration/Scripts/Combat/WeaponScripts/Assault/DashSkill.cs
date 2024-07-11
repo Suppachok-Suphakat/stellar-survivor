@@ -134,7 +134,7 @@ public class DashSkill : MonoBehaviour, IWeapon
 
     public void SkillActivate()
     {
-        animator.SetTrigger("Attack");
+        Attack();
         playerController.Dash();
     }
 
