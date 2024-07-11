@@ -19,9 +19,9 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 5f;
     public float startingMoveSpeed;
 
-    [SerializeField] private float dashSpeed = 4f;
+    [SerializeField] public float dashSpeed = 4f;
     [SerializeField] private int dashStamina = 100;
-    [SerializeField] private TrailRenderer trailRenderer;
+    [SerializeField] public TrailRenderer trailRenderer;
     [SerializeField] private Transform swordWeaponCollider;
     [SerializeField] private Transform spearWeaponCollider;
 
@@ -40,6 +40,8 @@ public class PlayerController : MonoBehaviour
     public bool isMenuActive = false;
 
     private Charecter charecter;
+
+    public LayerMask collisionLayer; // Layer to check for collisions
 
     private void Awake()
     {
@@ -161,24 +163,55 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void Dash()
+    public void Dash()
     {
-        if (!isDashing && charecter.stamina.currVal >= dashStamina && !isMenuActive)
+        if (!isDashing)
         {
-            isDashing = true;
-            moveSpeed *= dashSpeed;
-            trailRenderer.emitting = true;
-            StartCoroutine(EndDashRoutine());
+            Vector3 dashDirection = GetMouseDirection();
+            if (dashDirection != Vector3.zero)
+            {
+                isDashing = true;
+                StartCoroutine(DashRoutine(dashDirection));
+            }
         }
     }
 
-    private IEnumerator EndDashRoutine()
+    private Vector3 GetMouseDirection()
     {
-        float dashTime = .2f;
-        float dashCD = .25f;
-        charecter.ReduceStamina(dashStamina);
-        yield return new WaitForSeconds(dashTime);
-        moveSpeed = startingMoveSpeed;
+        Vector3 mousePosition = Input.mousePosition;
+        mousePosition.z = Camera.main.nearClipPlane;
+        Vector3 worldMousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+        Vector3 dashDirection = (worldMousePosition - transform.position).normalized;
+        return dashDirection;
+    }
+
+    private IEnumerator DashRoutine(Vector3 dashDirection)
+    {
+        float dashTime = 0.2f;
+        float dashCD = 0.25f;
+        float dashDistance = moveSpeed * dashSpeed * dashTime;
+
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, dashDirection, out hit, dashDistance, collisionLayer))
+        {
+            dashDistance = hit.distance; // Limit dash distance to the collision point
+        }
+
+        float dashEndTime = Time.time + dashTime;
+        trailRenderer.emitting = true;
+
+        while (Time.time < dashEndTime)
+        {
+            float distanceToMove = Mathf.Min(dashDistance, moveSpeed * dashSpeed * Time.deltaTime);
+            transform.position += dashDirection * distanceToMove;
+            dashDistance -= distanceToMove;
+
+            if (dashDistance <= 0)
+                break;
+
+            yield return null;
+        }
+
         trailRenderer.emitting = false;
         yield return new WaitForSeconds(dashCD);
         isDashing = false;

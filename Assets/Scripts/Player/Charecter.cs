@@ -126,40 +126,40 @@ public class Charecter : MonoBehaviour, IDamageable
         }
 
 
-        if (Input.GetKeyDown(KeyCode.LeftShift) && stamina.currVal >= 0f && 
-            playerController.movement.magnitude > 0f)
-        {
-            StopCoroutine(StaminaRecovery());
-            isLeftShiftPressed = true;
-            ReduceStaminaOverTime();
-            playerController.moveSpeed *= 2f;
+        //if (Input.GetKeyDown(KeyCode.LeftShift) && stamina.currVal >= 0f && 
+        //    playerController.movement.magnitude > 0f)
+        //{
+        //    StopCoroutine(StaminaRecovery());
+        //    isLeftShiftPressed = true;
+        //    ReduceStaminaOverTime();
+        //    playerController.moveSpeed *= 2f;
 
-            if (stamina.currVal <= 0f)
-            {
-                isExhuasted = true;
-                playerController.moveSpeed = playerController.startingMoveSpeed;
-                StartCoroutine(StaminaRecovery());
-            }
-        }
-        else if(Input.GetKey(KeyCode.LeftShift) && stamina.currVal >= 0f && 
-            playerController.movement.magnitude > 0f)
-        {
-            isLeftShiftPressed = true;
-            ReduceStaminaOverTime();
+        //    if (stamina.currVal <= 0f)
+        //    {
+        //        isExhuasted = true;
+        //        playerController.moveSpeed = playerController.startingMoveSpeed;
+        //        StartCoroutine(StaminaRecovery());
+        //    }
+        //}
+        //else if(Input.GetKey(KeyCode.LeftShift) && stamina.currVal >= 0f && 
+        //    playerController.movement.magnitude > 0f)
+        //{
+        //    isLeftShiftPressed = true;
+        //    ReduceStaminaOverTime();
 
-            if (stamina.currVal <= 0f)
-            {
-                isExhuasted = true;
-                playerController.moveSpeed = playerController.startingMoveSpeed;
-                StartCoroutine(StaminaRecovery());
-            }
-        }
+        //    if (stamina.currVal <= 0f)
+        //    {
+        //        isExhuasted = true;
+        //        playerController.moveSpeed = playerController.startingMoveSpeed;
+        //        StartCoroutine(StaminaRecovery());
+        //    }
+        //}
 
-        if (Input.GetKeyUp(KeyCode.LeftShift))
-        {
-            isLeftShiftPressed = false;
-            playerController.moveSpeed = playerController.startingMoveSpeed;
-        }
+        //if (Input.GetKeyUp(KeyCode.LeftShift))
+        //{
+        //    isLeftShiftPressed = false;
+        //    playerController.moveSpeed = playerController.startingMoveSpeed;
+        //}
     }
 
     private void OnCollisionStay2D(Collision2D other)
