@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6761197984265071040}
   - component: {fileID: 5857298609134333650}
   m_Layer: 0
-  m_Name: Fire Slash
+  m_Name: RedSwordSkill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -54,7 +54,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 79d021027e0cae940a30e4ef6e576e68, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -75,8 +75,8 @@ SpriteRenderer:
   m_SortingLayerID: -375266883
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: -33718261, guid: a7b060d036baf3f448ce21152d76066e, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 475857233, guid: c16294307f1401f4baec11a9f020e1e7, type: 3}
+  m_Color: {r: 0.99215686, g: 0.6392157, b: 0.6431373, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -96,7 +96,7 @@ Animator:
   m_GameObject: {fileID: 7946816441893005725}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: aad249ecec39145479f68d1a2836a20e, type: 2}
+  m_Controller: {fileID: 9100000, guid: f5aded35f88c6c8439d27bc172222206, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

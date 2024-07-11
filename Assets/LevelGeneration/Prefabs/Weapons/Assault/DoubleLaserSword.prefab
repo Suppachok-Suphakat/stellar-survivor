@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1321986840772709359}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0, z: 0}
+  m_LocalPosition: {x: -0.15, y: -0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -151,11 +151,12 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.21028525, y: 0.25114882}
-      - {x: -0.2824923, y: -0.24778475}
-      - {x: -0.20962235, y: -0.32719916}
-      - {x: 0.291348, y: 0.16680813}
-      - {x: 0.2930604, y: 0.25091213}
+    - - {x: 0.5457489, y: 0.62409604}
+      - {x: -0.62511325, y: -0.544339}
+      - {x: -0.6253965, y: -0.62173295}
+      - {x: -0.5436058, y: -0.62375337}
+      - {x: 0.62450117, y: 0.53975534}
+      - {x: 0.62359035, y: 0.6234382}
 --- !u!1 &9173177442540303044
 GameObject:
   m_ObjectHideFlags: 0
@@ -183,7 +184,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9173177442540303044}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.02, y: 0.47, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -233,7 +234,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -375266883
   m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 112003610, guid: c679f375dd508cc43adbc343dfcf56e1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -255,7 +256,7 @@ Animator:
   m_GameObject: {fileID: 9173177442540303044}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6dd61ba1be208a74380be7d9fa1f7d9e, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2ea001955f191db46acbe21aa65c3add, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -277,13 +278,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2936583771f99724f921bea3e4495189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slashAnimPrefab: {fileID: 7946816441893005725, guid: 47a39739d321f4247bb5d07acde306d2, type: 3}
+  slashAnimPrefab: {fileID: 7946816441893005725, guid: bae2fdc75c3506248997fe7769b2df79, type: 3}
   slashAnimSpawnPoint: {fileID: 0}
-  weaponInfo: {fileID: 11400000, guid: 34ad963e94838f5449cd94e39c4976fb, type: 2}
+  weaponInfo: {fileID: 11400000, guid: 36e6c8416bb733748a6821919ef3c776, type: 2}
   staminaCost: 0
   damageAmount: 0
   weaponCollider: {fileID: 891328868100530254}
-  swordProjectileSkillPrefab: {fileID: 3554886383241864524, guid: 5ec19f7c8fef9844f81865acff6603d1, type: 3}
+  swordProjectileSkillPrefab: {fileID: 3554886383241864524, guid: d6afb445f59bef744baa8855472878c0, type: 3}
   newSwordSkill: {fileID: 0}
   skillSpawnPoint: {fileID: 3818162470198284704}
   swordAbilityAnimPrefab: {fileID: 0}
