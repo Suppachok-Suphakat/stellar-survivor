@@ -12,6 +12,7 @@ public class Projectile : MonoBehaviour
     [SerializeField] private float projectileRange = 10f;
 
     private Vector3 startPosition;
+    private Vector3 moveDirection;
 
     private void Start()
     {
@@ -32,6 +33,11 @@ public class Projectile : MonoBehaviour
     public void UpdateMoveSpeed(float moveSpeed)
     {
         this.moveSpeed = moveSpeed;
+    }
+
+    public void SetDirection(Vector3 direction)
+    {
+        moveDirection = direction.normalized;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -72,6 +78,13 @@ public class Projectile : MonoBehaviour
 
     private void MoveProjectile()
     {
-        transform.Translate(Vector3.right * Time.deltaTime * moveSpeed);
+        if (moveDirection != Vector3.zero)
+        {
+            transform.Translate(moveDirection * moveSpeed * Time.deltaTime, Space.World);
+        }
+        else
+        {
+            transform.Translate(Vector3.right * Time.deltaTime * moveSpeed);
+        }
     }
 }

@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Shooter : MonoBehaviour, IEnemy
@@ -36,13 +35,15 @@ public class Shooter : MonoBehaviour, IEnemy
             for (int j = 0; j < projectilesPerBurst; j++)
             {
                 Vector2 pos = FindBulletSpawnPos(currentAngle);
-
                 GameObject newBullet = Instantiate(bulletPrefab, pos, Quaternion.identity);
-                newBullet.transform.right = newBullet.transform.position - transform.position;
 
+                // Ensure the bullet faces and moves towards the player
+                Vector2 direction = (PlayerController.instance.transform.position - newBullet.transform.position).normalized;
+                newBullet.transform.right = direction;
 
                 if (newBullet.TryGetComponent(out Projectile projectile))
                 {
+                    projectile.SetDirection(direction);
                     projectile.UpdateMoveSpeed(bulletMoveSpeed);
                 }
 
@@ -83,8 +84,6 @@ public class Shooter : MonoBehaviour, IEnemy
         float x = transform.position.x + startingDistance * Mathf.Cos(currentAngle * Mathf.Deg2Rad);
         float y = transform.position.y + startingDistance * Mathf.Sin(currentAngle * Mathf.Deg2Rad);
 
-        Vector2 pos = new Vector2(x, y);
-
-        return pos;
+        return new Vector2(x, y);
     }
 }
