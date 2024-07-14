@@ -80,6 +80,7 @@ MonoBehaviour:
   enemyTiles:
   - {fileID: 4629653595643336442, guid: c36b88049d639794186401a72fd5c964, type: 3}
   - {fileID: 4629653595643336442, guid: c36b88049d639794186401a72fd5c964, type: 3}
+  - {fileID: 6417106477297603239, guid: ba6eec37d81e03b46b2edb9d48d90ae1, type: 3}
   outerWallTiles:
   - {fileID: 7819637060735282043, guid: 0aa58f7d84ea5594d9c97757dbc1b42f, type: 3}
   - {fileID: 3967377549724295642, guid: 72b327a59ae2a1742904b0e1fe7f0396, type: 3}
@@ -87,6 +88,8 @@ MonoBehaviour:
   currentEnemy: 0
   chestPrefabs:
   - {fileID: 6220888037838649635, guid: e8744d7ef1316754a807aa99d4b26915, type: 3}
+  - {fileID: 6220888037838649635, guid: 899f7cdc1f48e6f44bd46947b39dce8e, type: 3}
+  - {fileID: 6220888037838649635, guid: f4de10734002d884282dcb260d41aabf, type: 3}
   chestGO: {fileID: 0}
   bossEnemy1: {fileID: 0}
   bossEnemy2: {fileID: 0}

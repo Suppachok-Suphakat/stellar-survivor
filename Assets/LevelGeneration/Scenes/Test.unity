@@ -683,11 +683,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 232396707177813356, guid: c36b88049d639794186401a72fd5c964, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 232396707177813356, guid: c36b88049d639794186401a72fd5c964, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4100660503886856127, guid: c36b88049d639794186401a72fd5c964, type: 3}
       propertyPath: m_RootOrder
@@ -736,6 +736,10 @@ PrefabInstance:
     - target: {fileID: 4629653595643336442, guid: c36b88049d639794186401a72fd5c964, type: 3}
       propertyPath: m_Name
       value: Enemy_Voidling
+      objectReference: {fileID: 0}
+    - target: {fileID: 4629653595643336442, guid: c36b88049d639794186401a72fd5c964, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c36b88049d639794186401a72fd5c964, type: 3}
@@ -2501,7 +2505,7 @@ Transform:
   - {fileID: 730332674}
   - {fileID: 301761809}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &904733354
 GameObject:
@@ -5054,7 +5058,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1793259344
 PrefabInstance:
@@ -7050,43 +7054,47 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6220888036701264514, guid: e8744d7ef1316754a807aa99d4b26915, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6220888036701264514, guid: e8744d7ef1316754a807aa99d4b26915, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6220888036701264514, guid: e8744d7ef1316754a807aa99d4b26915, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 2.6191502
       objectReference: {fileID: 0}
     - target: {fileID: 6220888036701264514, guid: e8744d7ef1316754a807aa99d4b26915, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -0.1733
       objectReference: {fileID: 0}
     - target: {fileID: 6220888037515977019, guid: e8744d7ef1316754a807aa99d4b26915, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6220888037515977019, guid: e8744d7ef1316754a807aa99d4b26915, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6220888037515977019, guid: e8744d7ef1316754a807aa99d4b26915, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 0.9991
       objectReference: {fileID: 0}
     - target: {fileID: 6220888037515977019, guid: e8744d7ef1316754a807aa99d4b26915, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -0.1733
       objectReference: {fileID: 0}
     - target: {fileID: 6220888037838649635, guid: e8744d7ef1316754a807aa99d4b26915, type: 3}
       propertyPath: m_Name
       value: GunChest
       objectReference: {fileID: 0}
+    - target: {fileID: 6220888037838649635, guid: e8744d7ef1316754a807aa99d4b26915, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6220888037838649662, guid: e8744d7ef1316754a807aa99d4b26915, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6220888037838649662, guid: e8744d7ef1316754a807aa99d4b26915, type: 3}
       propertyPath: m_LocalPosition.x

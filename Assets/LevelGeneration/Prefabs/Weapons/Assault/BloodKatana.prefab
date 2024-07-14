@@ -231,9 +231,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 101
+  m_SortingLayerID: -375266883
+  m_SortingLayer: 3
+  m_SortingOrder: 0
   m_Sprite: {fileID: 1240608348, guid: d5058d54d4b69ed4a80e31d570f305f7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -288,11 +288,11 @@ MonoBehaviour:
   swordAbilityAnimPrefab: {fileID: 0}
   swordAbilityAnimSpawnPoint: {fileID: 0}
   swordAbilityAnim: {fileID: 0}
-  chargeTime: 0
+  chargeTime: 1
   activeTime: 1
   currentChargeTime: 0
   currentActiveTime: 0
-  chargeAmount: 0
-  maxChargeAmount: 0
+  chargeAmount: 1
+  maxChargeAmount: 1
   sliderObject: {fileID: 0}
   statusComponent: {fileID: 0}

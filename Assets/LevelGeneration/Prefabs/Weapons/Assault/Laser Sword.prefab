@@ -167,7 +167,7 @@ GameObject:
   - component: {fileID: 8079504509136952475}
   - component: {fileID: 6231741325783442478}
   - component: {fileID: 501232413425310456}
-  - component: {fileID: 5095965523616708504}
+  - component: {fileID: -7392777192261604769}
   m_Layer: 0
   m_Name: Laser Sword
   m_TagString: Untagged
@@ -265,7 +265,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!114 &5095965523616708504
+--- !u!114 &-7392777192261604769
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -274,26 +274,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 9173177442540303044}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2936583771f99724f921bea3e4495189, type: 3}
+  m_Script: {fileID: 11500000, guid: fbaf28eb3b80661459608ac6b7384b10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   slashAnimPrefab: {fileID: 7946816441893005725, guid: 47a39739d321f4247bb5d07acde306d2, type: 3}
   slashAnimSpawnPoint: {fileID: 0}
   weaponInfo: {fileID: 11400000, guid: 34ad963e94838f5449cd94e39c4976fb, type: 2}
-  staminaCost: 0
-  damageAmount: 0
+  staminaCost: 10
+  damageAmount: 10
   weaponCollider: {fileID: 891328868100530254}
-  swordProjectileSkillPrefab: {fileID: 3554886383241864524, guid: 5ec19f7c8fef9844f81865acff6603d1, type: 3}
-  newSwordSkill: {fileID: 0}
-  skillSpawnPoint: {fileID: 3818162470198284704}
-  swordAbilityAnimPrefab: {fileID: 0}
-  swordAbilityAnimSpawnPoint: {fileID: 0}
-  swordAbilityAnim: {fileID: 0}
-  chargeTime: 0
-  activeTime: 3
-  currentChargeTime: 0
-  currentActiveTime: 0
-  chargeAmount: 3
-  maxChargeAmount: 3
-  sliderObject: {fileID: 0}
-  statusComponent: {fileID: 0}

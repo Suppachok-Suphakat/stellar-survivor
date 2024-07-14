@@ -275,9 +275,9 @@ MonoBehaviour:
   delay: 1
   unlockCanvas: {fileID: 6220888037751591191}
   coinCanvas: {fileID: 0}
-  weaponInfo: {fileID: 11400000, guid: 763e979fc391cf04f983a40b88d5b5a8, type: 2}
-  isAssaultWeapon: 0
-  isRangeWeapon: 1
+  weaponInfo: {fileID: 11400000, guid: 3d2cfaf5cf594a94f9030e06f16fd1e3, type: 2}
+  isAssaultWeapon: 1
+  isRangeWeapon: 0
   price: 10
   toolbarSlot: {fileID: 0}
 --- !u!212 &6220888037042160353
@@ -345,7 +345,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0017313957, y: -1.2686057}
+  m_Offset: {x: -0.004149914, y: -1.2675929}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -356,7 +356,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.90835, y: 1.4627886}
+  m_Size: {x: 0.91522694, y: 1.4648142}
   m_EdgeRadius: 0
 --- !u!1 &6220888037138002567
 GameObject:
@@ -555,7 +555,7 @@ SpriteRenderer:
   m_SortingLayerID: -375266883
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1349397161, guid: 69fe9318071f4a548986fead5f058504, type: 3}
+  m_Sprite: {fileID: 747048225, guid: d5058d54d4b69ed4a80e31d570f305f7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -842,7 +842,7 @@ GameObject:
   - component: {fileID: 6220888037838649662}
   - component: {fileID: 6220888037838649663}
   m_Layer: 0
-  m_Name: GunChest
+  m_Name: BKatanaChest
   m_TagString: Chest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -127,6 +127,7 @@ public class PlayerController : MonoBehaviour
     public void Warp(Vector3 destinationPos)
     {
         StopAllCoroutines();
+        destinationPos.z = 0; // Ensure z is 0
         transform.position = destinationPos;
     }
 
@@ -141,8 +142,8 @@ public class PlayerController : MonoBehaviour
 
     private void Restart()
     {
-        //Load the last scene loaded, in this case Main, the only scene in the game. And we load it in "Single" mode so it replace the existing one
-        //and not load all the scene object in the current scene.
+        // Load the last scene loaded, in this case Main, the only scene in the game. And we load it in "Single" mode so it replaces the existing one
+        // and not load all the scene objects in the current scene.
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
     }
 
@@ -182,6 +183,7 @@ public class PlayerController : MonoBehaviour
         mousePosition.z = Camera.main.nearClipPlane;
         Vector3 worldMousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
         Vector3 dashDirection = (worldMousePosition - transform.position).normalized;
+        dashDirection.z = 0; // Ensure z is 0
         return dashDirection;
     }
 
@@ -203,7 +205,9 @@ public class PlayerController : MonoBehaviour
         while (Time.time < dashEndTime)
         {
             float distanceToMove = Mathf.Min(dashDistance, moveSpeed * dashSpeed * Time.deltaTime);
-            transform.position += dashDirection * distanceToMove;
+            Vector3 newPosition = transform.position + dashDirection * distanceToMove;
+            newPosition.z = 0; // Ensure z is 0
+            transform.position = newPosition;
             dashDistance -= distanceToMove;
 
             if (dashDistance <= 0)

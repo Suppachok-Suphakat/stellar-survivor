@@ -36,6 +36,8 @@ public class SwordFollowMouseSkill : MonoBehaviour, IWeapon
     [SerializeField] private GameObject sliderObject;
     [SerializeField] private StatusBar statusComponent;
 
+    private bool isSkillActive = false;
+
     enum AbilityState
     {
         ready,
@@ -90,6 +92,7 @@ public class SwordFollowMouseSkill : MonoBehaviour, IWeapon
                 if (activeTime > 0)
                 {
                     weaponCollider.gameObject.GetComponent<SwordDamageSouce>().chargeAmount = 0;
+                    isSkillActive = true;
                     activeTime -= Time.deltaTime;
                 }
                 else
@@ -101,6 +104,7 @@ public class SwordFollowMouseSkill : MonoBehaviour, IWeapon
             case AbilityState.charge:
                 if (newSwordSkill != null)
                 {
+                    isSkillActive = false;
                     Destroy(newSwordSkill);
                     animator.SetTrigger("CancelSkill");
                     animator.ResetTrigger("SkillThrow");
@@ -129,7 +133,7 @@ public class SwordFollowMouseSkill : MonoBehaviour, IWeapon
 
     public void Attack()
     {
-        if (charecter.stamina.currVal >= staminaCost && !PlayerController.instance.isMenuActive)
+        if (charecter.stamina.currVal >= staminaCost && !PlayerController.instance.isMenuActive && isSkillActive == false)
         {
             animator.SetTrigger("Attack");
             weaponCollider.gameObject.SetActive(true);

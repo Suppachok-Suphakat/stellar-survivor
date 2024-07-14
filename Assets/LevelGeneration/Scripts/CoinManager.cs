@@ -21,7 +21,8 @@ public class CoinManager : MonoBehaviour
 
     private void Start()
     {
-        
+        goldText = GameObject.Find(COIN_AMOUNT_TEXT).GetComponent<TMP_Text>();
+        goldText.text = "0" + currentGold.ToString();
     }
 
     private void Update()
