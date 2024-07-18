@@ -300,9 +300,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.011253357, y: 0.05452013}
+  m_Offset: {x: 0.5, y: -1.5}
   serializedVersion: 2
-  m_Radius: 3.325245
+  m_Radius: 4
 --- !u!1 &3441813902079613761
 GameObject:
   m_ObjectHideFlags: 0
@@ -415,7 +415,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 841.25, y: 415}
-  m_SizeDelta: {x: 137.5, y: 150}
+  m_SizeDelta: {x: 129.7789, y: 120.4026}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7127152462552115458
 CanvasRenderer:
@@ -445,7 +445,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: cbcce547366b2bf45956290efa14b5cc, type: 3}
+  m_Sprite: {fileID: 1860343072, guid: 3815654a75e0a604a89854ef6230a6b1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -475,7 +475,7 @@ GameObject:
   - component: {fileID: 5629509125484015226}
   - component: {fileID: 8019490650374748383}
   m_Layer: 10
-  m_Name: Pyrotauros
+  m_Name: VoidKing
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -489,7 +489,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4629653595643336442}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.2096453, y: 0.12442238, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -521,6 +521,7 @@ MonoBehaviour:
   rangeAttackCooldown: 5
   stopMovingWhileAttacking: 1
   stopMovingWhileRangeAttacking: 1
+  canRangeAttack: 0
   phase2MoveSpeed: 3
   phase2AttackRange: 0
   phase2RangeAttackRange: 2
@@ -578,7 +579,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b8fc565a02b64e408ea41ac33e94f70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 0
+  maxHealth: 500
   currentHealth: 0
   deathVFXPrefab: {fileID: 3626922010709504189, guid: 6edd3c2e4fc54a647b47a1663decdf66, type: 3}
   knockBackThrust: 15
@@ -617,8 +618,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.23756409, y: 0.07287979}
-  m_Size: {x: 1.2194519, y: 2.3629951}
+  m_Offset: {x: 0.7911229, y: -1.9609172}
+  m_Size: {x: 1.7020102, y: 1.7020102}
   m_Direction: 0
 --- !u!212 &4665463519184906572
 SpriteRenderer:
@@ -661,9 +662,9 @@ SpriteRenderer:
   m_SortingLayerID: -375266883
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: -580217625, guid: 21d276402ff3d00409e67ed62ba8d354, type: 3}
+  m_Sprite: {fileID: -1404526190, guid: 91fe20e3c5571e54f93f3ac11423fab5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -745,7 +746,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5810984377382944630}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.083, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -765,9 +766,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.7620802, y: -0.06916237}
+  m_Offset: {x: -0.39868617, y: -2.213296}
   serializedVersion: 2
-  m_Radius: 1.6730957
+  m_Radius: 0.41664642
 --- !u!114 &8925334782376568100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -926,7 +927,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8408776618715992325}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.083, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -946,9 +947,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.90647554, y: -0.06916261}
+  m_Offset: {x: -0.5222703, y: -2.253849}
   serializedVersion: 2
-  m_Radius: 1.2377877
+  m_Radius: 0.5125498
 --- !u!114 &6117764976522721188
 MonoBehaviour:
   m_ObjectHideFlags: 0

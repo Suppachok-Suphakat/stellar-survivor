@@ -18,6 +18,7 @@ public class BossEnemyAI : MonoBehaviour
     [SerializeField] private bool stopMovingWhileRangeAttacking = false;
 
     [Header("Phase2")]
+    [SerializeField] private bool canRangeAttack = true;
     [SerializeField] public float phase2MoveSpeed = 2f;
 
     [SerializeField] private float phase2AttackRange = 0f;
@@ -32,7 +33,6 @@ public class BossEnemyAI : MonoBehaviour
     //GameObject partner;
 
     private bool canAttack = true;
-    private bool canRangeAttack = true;
 
     private enum State
     {
@@ -86,14 +86,6 @@ public class BossEnemyAI : MonoBehaviour
             case State.AttackingPhase2:
                 AttackingPhase2();
                 break;
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Partner"))
-        {
-
         }
     }
 
