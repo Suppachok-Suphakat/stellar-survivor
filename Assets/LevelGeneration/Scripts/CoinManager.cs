@@ -2,55 +2,54 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using Unity.VisualScripting;
 
 public class CoinManager : MonoBehaviour
 {
     public static CoinManager Instance;
 
     private TMP_Text goldText;
-    public int currentGold = 0;
+    public int currentGold = 100; // Start with 100 gold
 
     const string COIN_AMOUNT_TEXT = "Gold Amount Text";
 
     private void Awake()
     {
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
+        // Ensure only one instance of CoinManager exists
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void Start()
     {
+        // Initialize goldText and update the displayed gold amount
         goldText = GameObject.Find(COIN_AMOUNT_TEXT).GetComponent<TMP_Text>();
-        goldText.text = "0" + currentGold.ToString();
+        UpdateGoldText();
     }
 
-    private void Update()
+    private void UpdateGoldText()
     {
-
-    }
-
-    public void UpdateCurrentGold(int pickupAmout)
-    {
-        currentGold += pickupAmout;
-
-        if (goldText == null)
+        if (goldText != null)
         {
-            goldText = GameObject.Find(COIN_AMOUNT_TEXT).GetComponent<TMP_Text>();
+            goldText.text = currentGold.ToString("D4");
         }
+    }
 
-        goldText.text = currentGold.ToString("D4");
+    public void UpdateCurrentGold(int pickupAmount)
+    {
+        currentGold += pickupAmount;
+        UpdateGoldText();
     }
 
     public void DecreaseCurrentGold(int itemPrice)
     {
         currentGold -= itemPrice;
-
-        if (goldText == null)
-        {
-            goldText = GameObject.Find(COIN_AMOUNT_TEXT).GetComponent<TMP_Text>();
-        }
-
-        goldText.text = currentGold.ToString("D4");
+        UpdateGoldText();
     }
 }
