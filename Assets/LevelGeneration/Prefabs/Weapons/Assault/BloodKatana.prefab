@@ -288,8 +288,8 @@ MonoBehaviour:
   swordAbilityAnimPrefab: {fileID: 0}
   swordAbilityAnimSpawnPoint: {fileID: 0}
   swordAbilityAnim: {fileID: 0}
-  chargeTime: 1
-  activeTime: 1
+  chargeTime: 0.5
+  activeTime: 0.3
   currentChargeTime: 0
   currentActiveTime: 0
   chargeAmount: 1

@@ -377,7 +377,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9da477ae6bd99a47a379eaf54b97ff1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponInfo: {fileID: 11400000, guid: 36e6c8416bb733748a6821919ef3c776, type: 2}
+  weaponInfo: {fileID: 11400000, guid: 3d2cfaf5cf594a94f9030e06f16fd1e3, type: 2}
   slotSprite: {fileID: 1337675963}
   chargeBar: {fileID: 334400709}
   itemType: 2

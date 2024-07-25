@@ -189,7 +189,7 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator DashRoutine(Vector3 dashDirection)
     {
-        float dashTime = 0.2f;
+        float dashTime = 0.3f;
         float dashCD = 0.25f;
         float dashDistance = moveSpeed * dashSpeed * dashTime;
 
