@@ -283,6 +283,7 @@ GameObject:
   - component: {fileID: 1818015626871214657}
   - component: {fileID: 5629509125484015226}
   - component: {fileID: 8019490650374748383}
+  - component: {fileID: 7966240628370006482}
   m_Layer: 10
   m_Name: Enemy_Voidling
   m_TagString: Enemy
@@ -507,6 +508,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whiteFlashMat: {fileID: 2100000, guid: 2dfd1fb67a3520241a6ba463545b8721, type: 2}
   restoreDefaultMatTime: 0.2
+--- !u!114 &7966240628370006482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4629653595643336442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bd04e127999e82408b2a72127447fab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemDrops:
+  - itemPrefab: {fileID: 5165702458926165565, guid: 8de20344b93dff443b75f4580a812e78, type: 3}
+    dropChance: 10
 --- !u!1 &4975459596118953980
 GameObject:
   m_ObjectHideFlags: 0

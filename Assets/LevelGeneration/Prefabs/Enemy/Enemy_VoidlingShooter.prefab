@@ -260,6 +260,7 @@ GameObject:
   - component: {fileID: 5558173840406602056}
   - component: {fileID: 9109020172715979319}
   - component: {fileID: 122299241523337521}
+  - component: {fileID: 8522610788008941855}
   m_Layer: 10
   m_Name: Enemy_VoidlingShooter
   m_TagString: Enemy
@@ -486,6 +487,21 @@ MonoBehaviour:
   startingDistance: 0.1
   timeBetweenBursts: 0
   restTime: 1
+--- !u!114 &8522610788008941855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6417106477297603239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bd04e127999e82408b2a72127447fab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemDrops:
+  - itemPrefab: {fileID: 5165702458926165565, guid: 8de20344b93dff443b75f4580a812e78, type: 3}
+    dropChance: 10
 --- !u!1 &7221261851667534193
 GameObject:
   m_ObjectHideFlags: 0

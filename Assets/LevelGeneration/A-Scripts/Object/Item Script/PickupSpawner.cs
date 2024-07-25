@@ -4,13 +4,25 @@ using UnityEngine;
 
 public class PickupSpawner : MonoBehaviour
 {
-    [SerializeField] private GameObject[] itemPrefabs;
+    [System.Serializable]
+    public struct ItemDrop
+    {
+        public GameObject itemPrefab;
+        [Range(0, 100)]
+        public float dropChance; // Drop chance percentage (0 to 100)
+    }
+
+    [SerializeField] private ItemDrop[] itemDrops;
 
     public void DropItems()
     {
-        foreach (GameObject itemPrefab in itemPrefabs)
+        foreach (ItemDrop itemDrop in itemDrops)
         {
-            Instantiate(itemPrefab, transform.position, Quaternion.identity);
+            float randomValue = Random.Range(0f, 100f);
+            if (randomValue <= itemDrop.dropChance)
+            {
+                Instantiate(itemDrop.itemPrefab, transform.position, Quaternion.identity);
+            }
         }
     }
 }
