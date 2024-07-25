@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 12
+  spritePixelsToUnits: 10
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -122,17 +122,17 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 64
+        width: 48
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e429c4e6f58f8264299db10a9cf7cbb7
-      internalID: -1404526190
+      spriteID: 74edf2ae4528e5d47b617b063d4f34a9
+      internalID: -1579003273
       vertices: []
       indices: 
       edges: []
@@ -141,19 +141,19 @@ TextureImporter:
       name: Boss1-Walk_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 48
         y: 0
-        width: 64
-        height: 64
+        width: 48
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c827594dfe342de4f81282521d21f314
-      internalID: -863387735
+      spriteID: 27d6a2d3351ad6347a9bdfbc3e8f3588
+      internalID: -996429159
       vertices: []
       indices: 
       edges: []
@@ -162,19 +162,19 @@ TextureImporter:
       name: Boss1-Walk_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 96
         y: 0
-        width: 64
-        height: 64
+        width: 48
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 813ebac7318357a4ca5be9cc3aca20ed
-      internalID: 486110980
+      spriteID: 04daf4525b10a3240bddfa6e5a70c6bc
+      internalID: -186110360
       vertices: []
       indices: 
       edges: []
@@ -183,19 +183,19 @@ TextureImporter:
       name: Boss1-Walk_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 144
         y: 0
-        width: 64
-        height: 64
+        width: 48
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0c608083e8cfb740866bba2da0ff81b
-      internalID: -1294424326
+      spriteID: 755e6ed06c42e854db2d1aebc52435a6
+      internalID: -1916200008
       vertices: []
       indices: 
       edges: []
@@ -204,19 +204,19 @@ TextureImporter:
       name: Boss1-Walk_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 192
         y: 0
-        width: 64
-        height: 64
+        width: 48
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c5ce3dc406065b646b582b62867db266
-      internalID: 17571466
+      spriteID: 9bafe87cd6139f049a5984697e1a1d31
+      internalID: 1846290218
       vertices: []
       indices: 
       edges: []
@@ -225,19 +225,19 @@ TextureImporter:
       name: Boss1-Walk_5
       rect:
         serializedVersion: 2
-        x: 320
+        x: 240
         y: 0
-        width: 64
-        height: 64
+        width: 48
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0692296038d6a6f419f214e2801f96dd
-      internalID: 1615473942
+      spriteID: 7a79809b1f47abc45a9901095d20aadc
+      internalID: 427288494
       vertices: []
       indices: 
       edges: []
@@ -246,19 +246,19 @@ TextureImporter:
       name: Boss1-Walk_6
       rect:
         serializedVersion: 2
-        x: 384
+        x: 288
         y: 0
-        width: 64
-        height: 64
+        width: 48
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ccd990e49f8f8e9488b688ca2a38c37b
-      internalID: -1030567305
+      spriteID: 4a55205299d2770499aa995806a98dfa
+      internalID: -349291312
       vertices: []
       indices: 
       edges: []
@@ -267,19 +267,19 @@ TextureImporter:
       name: Boss1-Walk_7
       rect:
         serializedVersion: 2
-        x: 448
+        x: 336
         y: 0
-        width: 64
-        height: 64
+        width: 48
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91c4acc7197bf1646a32ed690c5af9fe
-      internalID: 2109967290
+      spriteID: 13ec57970cdd96747a8a337826d1c05e
+      internalID: -1347205308
       vertices: []
       indices: 
       edges: []
@@ -295,15 +295,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Boss1-Walk_0: -1404526190
-      Boss1-Walk_2: 486110980
-      Boss1-Walk_7: 2109967290
-      Boss1-Walk_4: 17571466
-      Boss1-Walk_6: -1030567305
-      Boss1-Walk_5: 1615473942
-      Boss1-Walk_1: -863387735
-      Boss1-Walk_3: -1294424326
-      Boss1-Walk_8: 817862254
+      Boss1-Walk_0: -1579003273
+      Boss1-Walk_2: -186110360
+      Boss1-Walk_7: -1347205308
+      Boss1-Walk_4: 1846290218
+      Boss1-Walk_6: -349291312
+      Boss1-Walk_5: 427288494
+      Boss1-Walk_1: -996429159
+      Boss1-Walk_3: -1916200008
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

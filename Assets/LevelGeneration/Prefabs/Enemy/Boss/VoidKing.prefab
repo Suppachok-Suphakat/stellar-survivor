@@ -300,7 +300,7 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.5, y: -1.5}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 4
 --- !u!1 &3441813902079613761
@@ -618,8 +618,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.7911229, y: -1.9609172}
-  m_Size: {x: 1.7020102, y: 1.7020102}
+  m_Offset: {x: 0.05708587, y: -0.3996017}
+  m_Size: {x: 1.8161819, y: 2.8437295}
   m_Direction: 0
 --- !u!212 &4665463519184906572
 SpriteRenderer:
@@ -662,12 +662,12 @@ SpriteRenderer:
   m_SortingLayerID: -375266883
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1404526190, guid: 91fe20e3c5571e54f93f3ac11423fab5, type: 3}
+  m_Sprite: {fileID: -1579003273, guid: 91fe20e3c5571e54f93f3ac11423fab5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.48, y: 0.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
