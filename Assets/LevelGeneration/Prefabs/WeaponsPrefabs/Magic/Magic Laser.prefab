@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 8029753169993942239}
   - component: {fileID: 3918924432365016873}
   - component: {fileID: 1189986662498351331}
-  - component: {fileID: 3594014432240375327}
   - component: {fileID: 5308205514674345642}
+  - component: {fileID: 2892083465640641253}
   m_Layer: 0
   m_Name: Magic Laser
   m_TagString: Untagged
@@ -29,13 +29,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 371351925480119373}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5434697, y: 1.791116, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3403967664440178448
 SpriteRenderer:
@@ -57,7 +57,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6344935187c51bd45b6201ea7e6c0eee, type: 2}
+  - {fileID: 2100000, guid: e05e5c31a4a44ca4ca7f865314ef3d11, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -75,15 +75,15 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 100
+  m_SortingLayerID: -375266883
+  m_SortingLayer: 3
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 86b3eab4568ebc94bbc3fa38e278a39c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
-  m_Size: {x: 0.5, y: 0.5}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -99,30 +99,11 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.25064987, y: -0.0021428468}
-  m_Size: {x: 0.4182952, y: 0.19763288}
+  m_Offset: {x: 0.49591798, y: -0.0033162534}
+  m_Size: {x: 0.9088391, y: 0.42999816}
   m_Direction: 1
 --- !u!50 &3918924432365016873
 Rigidbody2D:
@@ -141,12 +122,6 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
@@ -163,20 +138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5efd0af366d094d4e9c4673857ac27b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 0
---- !u!114 &3594014432240375327
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 371351925480119373}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b2257ddcc42c6e48ae6abbbcdda658a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  laserGrowTime: 0.22
+  damageAmount: 10
 --- !u!114 &5308205514674345642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,3 +152,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeTime: 0.4
+--- !u!114 &2892083465640641253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371351925480119373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d64911dd218b6347b9ab032d9d72347, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserGrowTime: 0.22
+  initialLaserRange: 1
+  maxLaserRange: 5

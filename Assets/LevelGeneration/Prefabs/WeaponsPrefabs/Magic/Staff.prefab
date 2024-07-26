@@ -205,7 +205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponInfo: {fileID: 11400000, guid: a83bd6cdb9a549e468cd5cf9261b3682, type: 2}
-  magic: {fileID: 0}
+  magic: {fileID: 371351925480119373, guid: 41f59588c3c594540b3eeba4a224166b, type: 3}
   magicLaserSpawnPoint: {fileID: 5357654354462653215}
   manaCost: 20
   magicSkill: {fileID: 0}

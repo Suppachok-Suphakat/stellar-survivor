@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
   cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
@@ -75,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -87,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -99,18 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -484,26 +477,25 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Tile Top_7: -1822124995
-      Tile Top_9: -929808712
-      Tile Top_10: -87520493
-      Tile Top_2: -1308181333
-      Tile Top_14: 1251672391
-      Tile Top_6: 1461960173
-      Tile Top_1: 1075483788
-      Tile Top_4: -424514497
-      Tile Top_12: 1042535434
-      Tile Top_3: -1730534372
       Tile Top_0: -744905649
-      Tile Top_15: -1382521325
-      Tile Top_8: -652228106
-      Tile Top_5: 1180769068
-      Tile Top_13: -1977450890
+      Tile Top_1: 1075483788
+      Tile Top_10: -87520493
       Tile Top_11: -512096457
+      Tile Top_12: 1042535434
+      Tile Top_13: -1977450890
+      Tile Top_14: 1251672391
+      Tile Top_15: -1382521325
       Tile Top_16: -1503087481
-  spritePackingTag: 
+      Tile Top_2: -1308181333
+      Tile Top_3: -1730534372
+      Tile Top_4: -424514497
+      Tile Top_5: 1180769068
+      Tile Top_6: 1461960173
+      Tile Top_7: -1822124995
+      Tile Top_8: -652228106
+      Tile Top_9: -929808712
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
