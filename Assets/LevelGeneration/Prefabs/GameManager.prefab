@@ -90,6 +90,7 @@ MonoBehaviour:
   - {fileID: 6220888037838649635, guid: e8744d7ef1316754a807aa99d4b26915, type: 3}
   - {fileID: 6220888037838649635, guid: 899f7cdc1f48e6f44bd46947b39dce8e, type: 3}
   - {fileID: 6220888037838649635, guid: f4de10734002d884282dcb260d41aabf, type: 3}
+  - {fileID: 6220888037838649635, guid: 935623f464052c64b9dd4972c3d1b846, type: 3}
   chestGO: {fileID: 0}
   bossEnemy1: {fileID: 4629653595643336442, guid: 061657d16820df24aa93bcb007e3ecf6, type: 3}
   bossEnemy2: {fileID: 0}
