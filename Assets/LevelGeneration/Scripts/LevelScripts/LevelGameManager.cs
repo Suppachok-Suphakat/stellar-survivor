@@ -83,7 +83,7 @@ public class LevelGameManager : MonoBehaviour
 
         //Set the text of levelText to the string "Day" and append the current level number.
         //levelText.text = "วันที่ " + level;
-        levelText.text = ThaiFontAdjuster.Adjust("Room no." + level);
+        levelText.text = ThaiFontAdjuster.Adjust("Stage " + level);
 
         //Set levelImage to active blocking player's view of the game board during setup.
         levelImage.SetActive(true);
@@ -176,7 +176,7 @@ public class LevelGameManager : MonoBehaviour
     public void GameOver()
     {
         //Set levelText to display number of levels passed and game over message
-        levelText.text = "You stop at room no." + level;
+        levelText.text = "You stop at Stage " + level;
         ThaiFontAdjuster.Adjust(levelText.text);
 
         //Enable black background image gameObject.

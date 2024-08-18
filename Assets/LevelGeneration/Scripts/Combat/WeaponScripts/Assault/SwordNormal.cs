@@ -18,6 +18,9 @@ public class SwordNormal : MonoBehaviour, IWeapon
 
     private GameObject slashAnim;
 
+    public AudioClip slashSound1;
+    public AudioClip slashSound2;
+
     enum AbilityState
     {
         ready,
@@ -60,6 +63,7 @@ public class SwordNormal : MonoBehaviour, IWeapon
         if (charecter.stamina.currVal >= staminaCost && !PlayerController.instance.isMenuActive)
         {
             animator.SetTrigger("Attack");
+            SoundManager.instance.RandomizeSfx(slashSound1, slashSound2);
             weaponCollider.gameObject.SetActive(true);
             slashAnim = Instantiate(slashAnimPrefab, slashAnimSpawnPoint.position, Quaternion.identity);
             slashAnim.transform.parent = this.transform.parent;

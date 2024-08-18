@@ -27,6 +27,9 @@ public class GunSkill : MonoBehaviour, IWeapon
     [SerializeField] private GameObject sliderObject;
     [SerializeField] private SkillStatusBar statusComponent;
 
+    public AudioClip shootSound1;
+    public AudioClip shootSound2;
+
     enum SkillState
     {
         ready,
@@ -110,6 +113,7 @@ public class GunSkill : MonoBehaviour, IWeapon
         GameObject newArrow = Instantiate(arrowPrefab, arrowSpawnPoint.position,
             ActiveWeapon.Instance.transform.rotation);
         newArrow.GetComponent<Arrow>().UpdateProjectileRange(weaponInfo.weaponRange);
+        SoundManager.instance.RandomizeSfx(shootSound1, shootSound2);
         StartCoroutine(ReduceStaminaRoutine());
     }
 

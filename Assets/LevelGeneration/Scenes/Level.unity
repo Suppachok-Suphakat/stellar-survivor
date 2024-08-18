@@ -6514,7 +6514,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Room no.1
+  m_Text: Stage 1
 --- !u!222 &1990228315
 CanvasRenderer:
   m_ObjectHideFlags: 0

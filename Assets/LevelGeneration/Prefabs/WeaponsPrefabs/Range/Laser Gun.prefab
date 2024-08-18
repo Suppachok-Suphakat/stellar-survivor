@@ -132,6 +132,8 @@ MonoBehaviour:
   maxChargeAmount: 2
   sliderObject: {fileID: 0}
   statusComponent: {fileID: 0}
+  shootSound1: {fileID: 8300000, guid: cffa8b190309b81438c48f7c2745cb4a, type: 3}
+  shootSound2: {fileID: 8300000, guid: cffa8b190309b81438c48f7c2745cb4a, type: 3}
 --- !u!1 &5666836248820612983
 GameObject:
   m_ObjectHideFlags: 0

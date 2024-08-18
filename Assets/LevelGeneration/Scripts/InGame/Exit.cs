@@ -11,6 +11,8 @@ public class Exit : MonoBehaviour
 
     [SerializeField] private GameObject exitCanvas;
 
+    public AudioClip exitSound;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         // Check if the tag of the trigger collided with is Exit.
@@ -37,6 +39,8 @@ public class Exit : MonoBehaviour
         // Check if the player is in the trigger zone and the F key is pressed.
         if (isPlayerInTrigger && Input.GetKeyDown(KeyCode.F))
         {
+            SoundManager.instance.RandomizeSfx(exitSound);
+
             // Invoke the Restart function to start the next level with a delay of restartLevelDelay (default 1 second).
             Invoke("Restart", restartLevelDelay);
 

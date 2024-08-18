@@ -170,7 +170,25 @@ public class LevelManager : MonoBehaviour
         InitialiseList();
         LayoutObjectAtRandom(wallTiles, wallCount.minimum, wallCount.maximum);
         LayoutObjectAtRandom(foodTiles, foodCount.minimum, foodCount.maximum);
-        int enemyCount = (int)Mathf.Log(level, 2f);
+
+        int enemyCount;
+        if (level >= 2 && level <= 5)
+        {
+            enemyCount = 2;
+        }
+        else if (level >= 6 && level <= 10)
+        {
+            enemyCount = 3;
+        }
+        else if (level >= 11)
+        {
+            enemyCount = 4;
+        }
+        else
+        {
+            enemyCount = 0; // Optional: Handle cases below level 2
+        }
+
         LayoutObjectAtRandom(enemyTiles, enemyCount, enemyCount);
 
         InitializeChestPool();

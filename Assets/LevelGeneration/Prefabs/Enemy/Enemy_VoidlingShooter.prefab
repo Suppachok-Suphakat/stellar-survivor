@@ -440,6 +440,8 @@ MonoBehaviour:
   deathVFXPrefab: {fileID: 3626922010709504189, guid: 6edd3c2e4fc54a647b47a1663decdf66, type: 3}
   knockBackThrust: 15
   hpBar: {fileID: 7446802703141893645}
+  hitSound1: {fileID: 8300000, guid: bbc66fb2b1717d14aa86fded495f5477, type: 3}
+  hitSound2: {fileID: 8300000, guid: 8afe3cbc9a5683546b7c4e2caf856daa, type: 3}
 --- !u!114 &5558173840406602056
 MonoBehaviour:
   m_ObjectHideFlags: 0

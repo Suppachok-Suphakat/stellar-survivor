@@ -384,3 +384,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   restartLevelDelay: 1
   exitCanvas: {fileID: 5548802594548175346}
+  exitSound: {fileID: 8300000, guid: 83eeece3eae77a240b87ed3fb09723f9, type: 3}

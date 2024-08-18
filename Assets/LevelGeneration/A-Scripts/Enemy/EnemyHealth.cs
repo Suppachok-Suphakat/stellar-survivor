@@ -14,6 +14,9 @@ public class EnemyHealth : MonoBehaviour
 
     [SerializeField] StatusBar hpBar;
 
+    public AudioClip hitSound1;
+    public AudioClip hitSound2;
+
     private void Awake()
     {
         flash = GetComponent<Flash>();
@@ -29,6 +32,7 @@ public class EnemyHealth : MonoBehaviour
     public void UpdateHpBar()
     {
         hpBar.Set(currentHealth, maxHealth);
+        SoundManager.instance.RandomizeSfx(hitSound1, hitSound2);
     }
 
     public void TakeDamage(int damage)
