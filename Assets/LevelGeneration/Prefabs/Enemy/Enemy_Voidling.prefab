@@ -523,7 +523,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemDrops:
-  - itemPrefab: {fileID: 5165702458926165565, guid: 8de20344b93dff443b75f4580a812e78, type: 3}
+  - itemPrefab: {fileID: 5165702458926165565, guid: b9dd56eeb3072714286c464af8ca57bb, type: 3}
     dropChance: 10
 --- !u!1 &4975459596118953980
 GameObject:

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 956034171076408888}
   - component: {fileID: 5345225502399376378}
   m_Layer: 0
-  m_Name: 1xGoldCoin
+  m_Name: 1xCoin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: -375266883
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2d1bb4b08d89fa64d95d1f959b56c6b3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f3e37f22c7bdb1045b8a27019f760edc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -101,7 +101,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.7, y: 0.7}
+  m_Size: {x: 0.5, y: 0.5}
   m_Direction: 0
 --- !u!50 &956034171076408888
 Rigidbody2D:
