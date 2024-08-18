@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GunSkill : MonoBehaviour, IWeapon
+public class LaserGun : MonoBehaviour, IWeapon
 {
     [SerializeField] private WeaponInfo weaponInfo;
     [SerializeField] private GameObject arrowPrefab;
@@ -112,7 +112,7 @@ public class GunSkill : MonoBehaviour, IWeapon
         myAnimator.SetTrigger(FIRE_HASH);
         GameObject newArrow = Instantiate(arrowPrefab, arrowSpawnPoint.position,
             ActiveWeapon.Instance.transform.rotation);
-        newArrow.GetComponent<Arrow>().UpdateProjectileRange(weaponInfo.weaponRange);
+        newArrow.GetComponent<Laser>().UpdateLaserRange(weaponInfo.weaponRange);
         SoundManager.instance.RandomizeSfx(shootSound1, shootSound2);
         StartCoroutine(ReduceStaminaRoutine());
     }

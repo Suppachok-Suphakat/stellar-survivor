@@ -280,7 +280,7 @@ MonoBehaviour:
   slashAnimPrefab: {fileID: 7946816441893005725, guid: 47a39739d321f4247bb5d07acde306d2, type: 3}
   slashAnimSpawnPoint: {fileID: 0}
   weaponInfo: {fileID: 11400000, guid: 34ad963e94838f5449cd94e39c4976fb, type: 2}
-  staminaCost: 10
+  staminaCost: 0
   damageAmount: 10
   weaponCollider: {fileID: 891328868100530254}
   slashSound1: {fileID: 8300000, guid: 735ec93eb942687499c2c8e2dafe7675, type: 3}

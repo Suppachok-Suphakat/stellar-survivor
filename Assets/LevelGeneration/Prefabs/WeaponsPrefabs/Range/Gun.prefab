@@ -122,7 +122,7 @@ MonoBehaviour:
   weaponInfo: {fileID: 11400000, guid: 763e979fc391cf04f983a40b88d5b5a8, type: 2}
   arrowPrefab: {fileID: 3554886383241864524, guid: be5d267ae905ba94693af271501095bf, type: 3}
   arrowSpawnPoint: {fileID: 2601915384263383017}
-  staminaCost: 10
+  staminaCost: 5
   arrowSkillPrefab: {fileID: 0}
   chargeTime: 2
   activeTime: 2

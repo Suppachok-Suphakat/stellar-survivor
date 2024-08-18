@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4159931278828064704}
   - component: {fileID: 6544619966122473217}
   - component: {fileID: 6635701450474488923}
-  - component: {fileID: -6150917150152995795}
+  - component: {fileID: -8019867673016486125}
   m_Layer: 0
   m_Name: Laser Gun
   m_TagString: Untagged
@@ -107,7 +107,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!114 &-6150917150152995795
+--- !u!114 &-8019867673016486125
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -116,12 +116,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 3220196008529797064}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4637b979c5dc4284099b2e0f685cbf25, type: 3}
+  m_Script: {fileID: 11500000, guid: 988e5501c5370434bbb1ec64533f2db5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   weaponInfo: {fileID: 11400000, guid: beba0e4f796e04746819ba55bb708813, type: 2}
   arrowPrefab: {fileID: 371351925480119373, guid: 41f59588c3c594540b3eeba4a224166b, type: 3}
-  arrowSpawnPoint: {fileID: 5357654354462653215}
+  arrowSpawnPoint: {fileID: 4159931278828064704}
   staminaCost: 10
   arrowSkillPrefab: {fileID: 0}
   chargeTime: 2

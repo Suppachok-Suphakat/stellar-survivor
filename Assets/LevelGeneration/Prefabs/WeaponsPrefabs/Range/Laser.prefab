@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5308205514674345642}
   - component: {fileID: 2892083465640641253}
   m_Layer: 0
-  m_Name: Magic Laser
+  m_Name: Laser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
