@@ -12,8 +12,10 @@ GameObject:
   - component: {fileID: 6094087010978361068}
   - component: {fileID: 6141187923224884804}
   - component: {fileID: 2451321667839671323}
+  - component: {fileID: -7916407456429988241}
+  - component: {fileID: -8100023126507327033}
   m_Layer: 0
-  m_Name: Soda
+  m_Name: EnerygyPack
   m_TagString: Soda
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -132,3 +134,31 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &-7916407456429988241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1564929196585572622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3d31a9e0181ae74ab9a5c17f343b347, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyVFX: {fileID: 3626922010709504189, guid: 6edd3c2e4fc54a647b47a1663decdf66, type: 3}
+--- !u!114 &-8100023126507327033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1564929196585572622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bd04e127999e82408b2a72127447fab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemDrops:
+  - itemPrefab: {fileID: 5165702458926165565, guid: 2c8eabcc7f80fb14b90ba044e6e01db6, type: 3}
+    dropChance: 100

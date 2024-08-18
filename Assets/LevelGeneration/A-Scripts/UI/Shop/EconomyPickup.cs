@@ -7,7 +7,9 @@ public class EconomyPickup : MonoBehaviour
 {
     private enum PickUpType
     {
-        GoldCoin
+        CoinDrop,
+        HealthDrop,
+        EnergyDrop
     }
 
     [SerializeField] private int pickupAmout;
@@ -89,8 +91,14 @@ public class EconomyPickup : MonoBehaviour
     {
         switch (pickUpType)
         {
-            case PickUpType.GoldCoin:
+            case PickUpType.CoinDrop:
                 CoinManager.Instance.UpdateCurrentGold(pickupAmout);
+                break;
+            case PickUpType.HealthDrop:
+                Charecter.instance.Heal(pickupAmout);
+                break;
+            case PickUpType.EnergyDrop:
+                Charecter.instance.RestoreStamina(pickupAmout);
                 break;
         }
     }
