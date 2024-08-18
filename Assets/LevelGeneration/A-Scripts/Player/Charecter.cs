@@ -115,50 +115,14 @@ public class Charecter : MonoBehaviour, IDamageable
 
     private void Update()
     {
-        if(stamina.currVal == 0)
-        {
-            RestoreStamina(1);
-        }
-
-        if (!isLeftShiftPressed && !isExhuasted)
-        {
-            RestoreStaminaOverTime();
-        }
-
-
-        //if (Input.GetKeyDown(KeyCode.LeftShift) && stamina.currVal >= 0f && 
-        //    playerController.movement.magnitude > 0f)
+        //if(stamina.currVal == 0)
         //{
-        //    StopCoroutine(StaminaRecovery());
-        //    isLeftShiftPressed = true;
-        //    ReduceStaminaOverTime();
-        //    playerController.moveSpeed *= 2f;
-
-        //    if (stamina.currVal <= 0f)
-        //    {
-        //        isExhuasted = true;
-        //        playerController.moveSpeed = playerController.startingMoveSpeed;
-        //        StartCoroutine(StaminaRecovery());
-        //    }
-        //}
-        //else if(Input.GetKey(KeyCode.LeftShift) && stamina.currVal >= 0f && 
-        //    playerController.movement.magnitude > 0f)
-        //{
-        //    isLeftShiftPressed = true;
-        //    ReduceStaminaOverTime();
-
-        //    if (stamina.currVal <= 0f)
-        //    {
-        //        isExhuasted = true;
-        //        playerController.moveSpeed = playerController.startingMoveSpeed;
-        //        StartCoroutine(StaminaRecovery());
-        //    }
+        //    RestoreStamina(1);
         //}
 
-        //if (Input.GetKeyUp(KeyCode.LeftShift))
+        //if (!isLeftShiftPressed && !isExhuasted)
         //{
-        //    isLeftShiftPressed = false;
-        //    playerController.moveSpeed = playerController.startingMoveSpeed;
+        //    RestoreStaminaOverTime();
         //}
     }
 
