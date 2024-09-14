@@ -32,7 +32,7 @@ public class EnemyHealth : MonoBehaviour
     public void UpdateHpBar()
     {
         hpBar.Set(currentHealth, maxHealth);
-        SoundManager.instance.RandomizeSfx(hitSound1, hitSound2);
+        SoundManager.instance.RandomizeSfx2(hitSound1, hitSound2);
     }
 
     public void TakeDamage(int damage)

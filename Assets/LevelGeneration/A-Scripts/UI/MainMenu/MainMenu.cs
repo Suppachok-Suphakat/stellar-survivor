@@ -8,17 +8,18 @@ public class MainMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void StartGame()
     {
+        // Load the game scene (assuming scene 1 is the game scene)
         SceneManager.LoadSceneAsync(1);
     }
 

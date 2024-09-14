@@ -18,7 +18,6 @@ public class KnightPartner : Partner
 
     public Transform damageCollider;
     public bool isAttacking = false;
-    private float timeBetweenAttacks = 10f;
 
     private Transform enemyTransform;
     private Transform focusEnemy;

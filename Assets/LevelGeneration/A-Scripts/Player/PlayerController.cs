@@ -20,7 +20,6 @@ public class PlayerController : MonoBehaviour
     public float startingMoveSpeed;
 
     [SerializeField] public float dashSpeed = 4f;
-    [SerializeField] private int dashStamina = 100;
     [SerializeField] public TrailRenderer trailRenderer;
     [SerializeField] private Transform swordWeaponCollider;
     [SerializeField] private Transform spearWeaponCollider;

@@ -1588,7 +1588,6 @@ MonoBehaviour:
   moveSpeed: 5
   startingMoveSpeed: 0
   dashSpeed: 4
-  dashStamina: 20
   trailRenderer: {fileID: 730332673}
   swordWeaponCollider: {fileID: 379414553}
   spearWeaponCollider: {fileID: 1273367380}
@@ -1633,7 +1632,6 @@ MonoBehaviour:
   isLeftShiftPressed: 0
   staminaReduceRate: 2
   staminaReduceDelay: 0.1
-  manaReduceRate: 2
   manaReduceDelay: 0.1
   isExhuasted: 0
 --- !u!70 &887871650
@@ -3110,7 +3108,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 3b510868612e8204c91a4073c524b080, type: 3}
-    m_FontSize: 180
+    m_FontSize: 90
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1

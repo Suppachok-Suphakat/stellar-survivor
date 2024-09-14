@@ -283,5 +283,5 @@ MonoBehaviour:
   staminaCost: 0
   damageAmount: 10
   weaponCollider: {fileID: 891328868100530254}
-  slashSound1: {fileID: 8300000, guid: 735ec93eb942687499c2c8e2dafe7675, type: 3}
+  slashSound1: {fileID: 8300000, guid: 766124fbfb4a72b47b30d805fc761f15, type: 3}
   slashSound2: {fileID: 8300000, guid: 766124fbfb4a72b47b30d805fc761f15, type: 3}

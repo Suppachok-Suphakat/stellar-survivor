@@ -148,13 +148,13 @@ public class LevelManager : MonoBehaviour
     {
         switch (level)
         {
-            case 10:
+            case 20:
                 SetupBossRoom1();
                 break;
-            case 20:
+            case 30:
                 SetupBossRoom2();
                 break;
-            case 30:
+            case 40:
                 SetupBossRoom3();
                 break;
             default:
@@ -180,9 +180,13 @@ public class LevelManager : MonoBehaviour
         {
             enemyCount = 3;
         }
-        else if (level >= 11)
+        else if (level >= 11 && level <= 15)
         {
             enemyCount = 4;
+        }
+        else if (level >= 16)
+        {
+            enemyCount = 5;
         }
         else
         {

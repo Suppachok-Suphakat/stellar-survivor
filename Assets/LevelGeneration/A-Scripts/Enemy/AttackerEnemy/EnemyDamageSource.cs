@@ -20,10 +20,10 @@ public class EnemyDamageSource : MonoBehaviour
             playerHealth.TakeDamage(damageAmount, transform);
         }
 
-        Knockback knockback = other.gameObject.GetComponent<Knockback>();
-        if (knockback != null)
-        {
-            knockback.GetKnockedBack(transform, knockBackThrust);
-        }
+        //Knockback knockback = other.gameObject.GetComponent<Knockback>();
+        //if (knockback != null)
+        //{
+        //    knockback.GetKnockedBack(transform, knockBackThrust);
+        //}
     }
 }

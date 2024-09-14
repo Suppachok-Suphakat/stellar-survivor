@@ -5,6 +5,7 @@ using UnityEngine;
 public class SoundManager : MonoBehaviour
 {
     public AudioSource efxSource;                   //Drag a reference to the audio source which will play the sound effects.
+    public AudioSource efxSource2;                   //Drag a reference to the audio source which will play the sound effects.
     public AudioSource musicSource;                 //Drag a reference to the audio source which will play the music.
     public static SoundManager instance = null;     //Allows other scripts to call functions from SoundManager.				
     public float lowPitchRange = .95f;              //The lowest a sound effect will be randomly pitched.
@@ -54,5 +55,23 @@ public class SoundManager : MonoBehaviour
 
         //Play the clip.
         efxSource.Play();
+    }
+
+    public void RandomizeSfx2(params AudioClip[] clips)
+    {
+        //Generate a random number between 0 and the length of our array of clips passed in.
+        int randomIndex = Random.Range(0, clips.Length);
+
+        //Choose a random pitch to play back our clip at between our high and low pitch ranges.
+        float randomPitch = Random.Range(lowPitchRange, highPitchRange);
+
+        //Set the pitch of the audio source to the randomly chosen pitch.
+        efxSource2.pitch = randomPitch;
+
+        //Set the clip to the clip at our randomly chosen index.
+        efxSource2.clip = clips[randomIndex];
+
+        //Play the clip.
+        efxSource2.Play();
     }
 }
